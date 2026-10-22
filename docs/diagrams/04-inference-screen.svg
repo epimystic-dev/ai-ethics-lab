@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" font-family="Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">The three-test screen</title>
+<desc id="d">A reason is screened by three tests: present in this case, present in similar cases, absent in dissimilar cases. All yes accepts; any unknown quarantines; each failure is filed under a named pseudo-reason with its repair. A conclusion is inherited only with its rule and its examples.</desc>
+<defs><marker id="a-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker><marker id="a-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b42318"/></marker><marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker><marker id="a-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9a6700"/></marker><marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3567c8"/></marker><marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b86e00"/></marker></defs>
+<rect x="0" y="0" width="1200" height="700" fill="#ffffff"/>
+<text x="28.0" y="40.0" font-size="22.0" fill="#1f2328" text-anchor="start" font-weight="700">Is this reason good enough? The three-test screen and the five pseudo-reasons (A2, A3, A6)</text>
+<text x="28.0" y="64.0" font-size="13.5" fill="#57606a" text-anchor="start">From the Buddhist and Nyaya logic of the sound reason. It catches shortcut learning: a chance correlate promoted to a rule.</text>
+<rect x="40.0" y="120.0" width="300.0" height="84.0" rx="6" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="52.0" y="142.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">1 Present in this case?</text>
+<text x="52.0" y="160.9" font-size="11.5" fill="#57606a" text-anchor="start">the reason holds of the subject</text>
+<line x1="190.0" y1="204.0" x2="190.0" y2="236.0" stroke="#1a7f37" stroke-width="1.6" marker-end="url(#a-green)"/>
+<text x="212.0" y="226.0" font-size="11.5" fill="#1a7f37" text-anchor="middle">yes</text>
+<rect x="40.0" y="240.0" width="300.0" height="84.0" rx="6" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="52.0" y="262.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">2 Present in similar cases?</text>
+<text x="52.0" y="280.9" font-size="11.5" fill="#57606a" text-anchor="start">a positive example where the conclusion is</text>
+<text x="52.0" y="295.8" font-size="11.5" fill="#57606a" text-anchor="start">known</text>
+<line x1="190.0" y1="324.0" x2="190.0" y2="356.0" stroke="#1a7f37" stroke-width="1.6" marker-end="url(#a-green)"/>
+<text x="212.0" y="346.0" font-size="11.5" fill="#1a7f37" text-anchor="middle">yes</text>
+<rect x="40.0" y="360.0" width="300.0" height="84.0" rx="6" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="52.0" y="382.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">3 Absent in dissimilar cases?</text>
+<text x="52.0" y="400.9" font-size="11.5" fill="#57606a" text-anchor="start">a searched negative sweep, with where and</text>
+<text x="52.0" y="415.8" font-size="11.5" fill="#57606a" text-anchor="start">how hard</text>
+<line x1="190.0" y1="444.0" x2="190.0" y2="496.0" stroke="#1a7f37" stroke-width="1.6" marker-end="url(#a-green)"/>
+<text x="212.0" y="466.0" font-size="11.5" fill="#1a7f37" text-anchor="middle">yes</text>
+<rect x="40.0" y="500.0" width="300.0" height="96.0" rx="6" fill="#e8f5ec" stroke="#1a7f37" stroke-width="1.2"/>
+<text x="52.0" y="522.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">Accepted</text>
+<text x="52.0" y="540.9" font-size="11.5" fill="#57606a" text-anchor="start">the screen certifies the process, not the</text>
+<text x="52.0" y="555.9" font-size="11.5" fill="#57606a" text-anchor="start">truth of the conclusion</text>
+<rect x="400.0" y="500.0" width="330.0" height="96.0" rx="6" fill="#fff8e1" stroke="#9a6700" stroke-width="1.2"/>
+<text x="412.0" y="522.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">Unknown on any test: quarantined</text>
+<text x="412.0" y="540.9" font-size="11.5" fill="#57606a" text-anchor="start">an untested rule is not a passed rule; it waits,</text>
+<text x="412.0" y="555.9" font-size="11.5" fill="#57606a" text-anchor="start">frozen, until the test is run</text>
+<path d="M340.0,170.0 C460.0,170.0 490.0,420.0 520.0,496.0" fill="none" stroke="#9a6700" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#a-amber)"/>
+<path d="M340.0,290.0 C460.0,290.0 490.0,420.0 550.0,496.0" fill="none" stroke="#9a6700" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#a-amber)"/>
+<path d="M340.0,410.0 C460.0,410.0 490.0,420.0 580.0,496.0" fill="none" stroke="#9a6700" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#a-amber)"/>
+<text x="550.0" y="410.0" font-size="12.0" fill="#9a6700" text-anchor="start" font-weight="700">unknown</text>
+<text x="790.0" y="124.0" font-size="14.0" fill="#b42318" text-anchor="start" font-weight="700">No on a test: a named pseudo-reason, with its repair</text>
+<rect x="790.0" y="140.0" width="370.0" height="54.0" rx="6" fill="#fdecea" stroke="#b42318" stroke-width="1.2"/>
+<text x="802.0" y="161.0" font-size="13.5" fill="#b42318" text-anchor="start" font-weight="700">unproved</text>
+<text x="930.0" y="161.0" font-size="11.5" fill="#1f2328" text-anchor="start">the reason is not present in this case</text>
+<text x="930.0" y="180.0" font-size="11.5" fill="#57606a" text-anchor="start">repair: establish the reason first</text>
+<rect x="790.0" y="202.0" width="370.0" height="54.0" rx="6" fill="#fdecea" stroke="#b42318" stroke-width="1.2"/>
+<text x="802.0" y="223.0" font-size="13.5" fill="#b42318" text-anchor="start" font-weight="700">straying</text>
+<text x="930.0" y="223.0" font-size="11.5" fill="#1f2328" text-anchor="start">it also occurs where the conclusion fails</text>
+<text x="930.0" y="242.0" font-size="11.5" fill="#57606a" text-anchor="start">repair: narrow the rule</text>
+<rect x="790.0" y="264.0" width="370.0" height="54.0" rx="6" fill="#fdecea" stroke="#b42318" stroke-width="1.2"/>
+<text x="802.0" y="285.0" font-size="13.5" fill="#b42318" text-anchor="start" font-weight="700">contradictory</text>
+<text x="930.0" y="285.0" font-size="11.5" fill="#1f2328" text-anchor="start">it goes with the absence of the conclusion</text>
+<text x="930.0" y="304.0" font-size="11.5" fill="#57606a" text-anchor="start">repair: the rule is inverted; drop it</text>
+<rect x="790.0" y="326.0" width="370.0" height="54.0" rx="6" fill="#fdecea" stroke="#b42318" stroke-width="1.2"/>
+<text x="802.0" y="347.0" font-size="13.5" fill="#b42318" text-anchor="start" font-weight="700">counter-balanced</text>
+<text x="930.0" y="347.0" font-size="11.5" fill="#1f2328" text-anchor="start">an equal reason supports the opposite</text>
+<text x="930.0" y="366.0" font-size="11.5" fill="#57606a" text-anchor="start">repair: escalate to a principal</text>
+<rect x="790.0" y="388.0" width="370.0" height="54.0" rx="6" fill="#fdecea" stroke="#b42318" stroke-width="1.2"/>
+<text x="802.0" y="409.0" font-size="13.5" fill="#b42318" text-anchor="start" font-weight="700">defeated</text>
+<text x="930.0" y="409.0" font-size="11.5" fill="#1f2328" text-anchor="start">a stronger source contradicts the conclusion</text>
+<text x="930.0" y="428.0" font-size="11.5" fill="#57606a" text-anchor="start">repair: defer to the stronger source</text>
+<rect x="790.0" y="450.0" width="370.0" height="54.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="802.0" y="471.0" font-size="13.5" fill="#1f2328" text-anchor="start" font-weight="700">residual</text>
+<text x="930.0" y="471.0" font-size="11.5" fill="#1f2328" text-anchor="start">fails, but fits none of the five</text>
+<text x="930.0" y="490.0" font-size="11.5" fill="#57606a" text-anchor="start">repair: a discovery: record it, extend the list</text>
+<line x1="344.0" y1="162.0" x2="784.0" y2="170.0" stroke="#b42318" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#a-red)"/>
+<text x="560.0" y="160.0" font-size="11.5" fill="#b42318" text-anchor="middle">no</text>
+<rect x="40.0" y="610.0" width="1120.0" height="66.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="56.0" y="634.0" font-size="13.5" fill="#1f2328" text-anchor="start" font-weight="700">A6  The five-part record:</text>
+<text x="250.0" y="634.0" font-size="12.5" fill="#57606a" text-anchor="start">thesis, reason, rule (with a positive and a negative example), application, conclusion. A conclusion is inherited downstream only</text>
+<text x="250.0" y="650.2" font-size="12.5" fill="#57606a" text-anchor="start">if the record is complete and the screen accepted it; a record without its negative example is partial and stops where it is.</text>
+</svg>

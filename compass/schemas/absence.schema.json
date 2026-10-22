@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/epimystic-dev/ai-ethics-lab/compass/schemas/absence.schema.json",
+  "title": "Absence claim",
+  "description": "No bare 'not present'. Implements D2 (typed absence).",
+  "type": "object",
+  "properties": {
+    "claim": {
+      "type": "string",
+      "description": "What is said to be absent.",
+      "minLength": 1
+    },
+    "kind": {
+      "enum": [
+        "not_yet",
+        "no_longer",
+        "not_that",
+        "never",
+        "unknown"
+      ],
+      "description": "D2: the four absences, or unknown with the search stated."
+    },
+    "search": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "where": {
+          "type": "string",
+          "description": "Where the search looked.",
+          "minLength": 1
+        },
+        "method": {
+          "type": "string",
+          "description": "How it looked.",
+          "minLength": 1
+        },
+        "elicitation_demonstrated": {
+          "type": "boolean",
+          "description": "D2: a zero is asserted only where the presence would have shown."
+        }
+      },
+      "required": [
+        "where",
+        "method",
+        "elicitation_demonstrated"
+      ]
+    },
+    "retest_triggers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Condition that requires re-testing.",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "claim",
+    "kind",
+    "search"
+  ],
+  "additionalProperties": false
+}

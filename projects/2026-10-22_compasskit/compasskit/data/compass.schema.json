@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/epimystic-dev/ai-ethics-lab/compass/compass.schema.json",
+  "title": "The Compass",
+  "description": "Schema for compass.json: the floor, the nine questions, the stack and the twenty-nine primitives, each with its adoption class and falsifier. A fork of the compass that validates against this schema can be read by the same tools.",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "name": {"type": "string", "minLength": 1},
+    "version": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "description": {"type": "string", "minLength": 1},
+    "license": {"type": "string", "minLength": 1},
+    "source": {
+      "type": "object",
+      "properties": {
+        "work": {"type": "string", "minLength": 1},
+        "edition": {"type": "string", "minLength": 1},
+        "primary_part": {"type": "string", "minLength": 1},
+        "also_summarised": {"type": "array", "items": {"type": "string"}},
+        "adapted": {"type": "boolean"},
+        "changes": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "notice": {"type": "string"}
+      },
+      "required": ["work", "edition", "primary_part", "adapted", "changes"],
+      "additionalProperties": false
+    },
+    "how_to_read": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "adoption_classes": {
+      "type": "object",
+      "properties": {
+        "A": {"type": "string"}, "B": {"type": "string"}, "C": {"type": "string"}, "D": {"type": "string"},
+        "note": {"type": "string"}
+      },
+      "required": ["A", "B", "C", "D"],
+      "additionalProperties": false
+    },
+    "floor": {
+      "type": "object",
+      "properties": {
+        "description": {"type": "string"},
+        "theses": {
+          "type": "array", "minItems": 6,
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {"enum": ["C1", "C2", "C3", "C4", "C5", "C6"]},
+              "name": {"type": "string", "minLength": 1},
+              "in_practice": {"type": "string", "minLength": 1}
+            },
+            "required": ["id", "name", "in_practice"],
+            "additionalProperties": false
+          }
+        },
+        "sub_rules": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "book_chapters": {"type": "array", "items": {"type": "integer", "minimum": 1}},
+        "note": {"type": "string"}
+      },
+      "required": ["description", "theses", "sub_rules"],
+      "additionalProperties": false
+    },
+    "questions": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "integer", "minimum": 1},
+          "question": {"type": "string", "minLength": 1},
+          "answer": {"type": "string", "minLength": 1},
+          "primitives": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+        },
+        "required": ["id", "question", "answer", "primitives"],
+        "additionalProperties": false
+      }
+    },
+    "series": {"type": "object"},
+    "stack": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "layer": {"type": "string", "minLength": 1},
+          "title": {"type": "string", "minLength": 1},
+          "order": {"type": "integer", "minimum": 0},
+          "primitives": {"type": "array", "items": {"type": "string"}}
+        },
+        "required": ["layer", "title", "order", "primitives"],
+        "additionalProperties": false
+      }
+    },
+    "primitives": {
+      "type": "array", "minItems": 1,
+      "items": {"$ref": "#/$defs/primitive"}
+    },
+    "adoption_procedure": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "step": {"type": "integer", "minimum": 1},
+          "name": {"type": "string", "minLength": 1},
+          "artifact": {"type": "string", "minLength": 1},
+          "do": {"type": "string", "minLength": 1}
+        },
+        "required": ["step", "name", "artifact", "do"],
+        "additionalProperties": false
+      }
+    },
+    "ingest_protocol": {
+      "type": "object",
+      "properties": {
+        "for_ai_systems": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "for_humans": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      },
+      "required": ["for_ai_systems", "for_humans"],
+      "additionalProperties": false
+    },
+    "limits": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+  },
+  "required": ["name", "version", "title", "license", "source", "adoption_classes", "floor", "questions", "stack", "primitives", "ingest_protocol", "limits"],
+  "additionalProperties": false,
+  "$defs": {
+    "class": {"enum": ["A", "B", "C", "D"]},
+    "primitive": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1},
+        "series": {"enum": ["A", "B", "C", "D", "E", "F", "G"]},
+        "question": {"type": "integer", "minimum": 1},
+        "stack_layer": {"type": "string", "minLength": 1},
+        "summary": {"type": "string", "minLength": 1},
+        "example": {"type": "string", "minLength": 1},
+        "statement": {"type": "string", "minLength": 1},
+        "warrant": {"type": "string", "minLength": 1},
+        "failure_mode": {"type": "string", "minLength": 1},
+        "sketch": {"type": "string", "minLength": 1},
+        "adoption": {
+          "type": "object",
+          "properties": {
+            "base_class": {"$ref": "#/$defs/class"},
+            "conditional": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {"part": {"type": "string", "minLength": 1}, "class": {"$ref": "#/$defs/class"}},
+                "required": ["part", "class"],
+                "additionalProperties": false
+              }
+            },
+            "class_reason": {"type": "string", "minLength": 1}
+          },
+          "required": ["base_class", "conditional", "class_reason"],
+          "additionalProperties": false
+        },
+        "falsifier": {"type": "string", "minLength": 1},
+        "book_chapters": {"type": "array", "items": {"type": "integer", "minimum": 1}},
+        "enforcement_layers": {
+          "type": "array", "minItems": 1,
+          "items": {"enum": ["context", "middleware", "architecture", "governance"]}
+        },
+        "data_contract": {"type": ["string", "null"]},
+        "reference_implementation": {"type": ["string", "null"]}
+      },
+      "required": ["id", "name", "series", "question", "stack_layer", "summary", "example", "statement", "warrant", "failure_mode", "sketch", "adoption", "falsifier", "enforcement_layers"],
+      "additionalProperties": false
+    }
+  }
+}

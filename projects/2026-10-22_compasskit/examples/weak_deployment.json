@@ -1,0 +1,43 @@
+{
+  "system": "example-weak-assistant",
+  "as_of": "2026-10-22",
+  "adopted": [
+    {
+      "id": "E1",
+      "layer": "context",
+      "owner": "prompt team",
+      "merged": "2026-09-01",
+      "notes": "eleven prohibitions in the system prompt"
+    },
+    {
+      "id": "A4",
+      "layer": "context"
+    },
+    {
+      "id": "E6",
+      "layer": "governance",
+      "owner": "research",
+      "merged": "2026-10-01"
+    }
+  ],
+  "floor_register": [
+    {
+      "id": "FR-9",
+      "restraint": "non_injury",
+      "act": "loosen",
+      "class": "C",
+      "governor": "a team lead",
+      "reason": "speed",
+      "scope": "bulk_delete",
+      "decided_at": "2026-10-01T09:00:00Z",
+      "expires_or_review": "2026-12-31"
+    }
+  ],
+  "bets": [
+    {
+      "id": "BET-1",
+      "design_choice": "a witness monitor",
+      "position_presupposed": "the witness view"
+    }
+  ]
+}

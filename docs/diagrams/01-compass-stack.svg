@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 934" width="1200" height="934" font-family="Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">The compass stack</title>
+<desc id="d">Eight layers from the floor (E1) at the bottom to the target states (F1-F3) at the top, with the twenty-nine primitives placed in their layer and coloured by adoption class.</desc>
+<defs><marker id="a-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker><marker id="a-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b42318"/></marker><marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker><marker id="a-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9a6700"/></marker><marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3567c8"/></marker><marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b86e00"/></marker></defs>
+<rect x="0" y="0" width="1200" height="934" fill="#ffffff"/>
+<text x="28.0" y="40.0" font-size="22.0" fill="#1f2328" text-anchor="start" font-weight="700">The compass stack: twenty-nine primitives in eight layers</text>
+<text x="28.0" y="64.0" font-size="13.5" fill="#57606a" text-anchor="start">Read from the bottom. The floor is laid first and every layer above stands on it; a team adopts in this order, restraint before capability. Target states</text>
+<text x="28.0" y="81.5" font-size="13.5" fill="#57606a" text-anchor="start">are specifications of success, not architecture.</text>
+<rect x="28.0" y="752.0" width="1144.0" height="78.0" rx="6" fill="#24292f" stroke="#24292f" stroke-width="1.2"/>
+<text x="44.0" y="778.0" font-size="14.5" fill="#ffffff" text-anchor="start" font-weight="700">0 The convergent floor and</text>
+<text x="44.0" y="796.9" font-size="14.5" fill="#ffffff" text-anchor="start" font-weight="700">the ethical floor</text>
+<text x="44.0" y="817.7" font-size="12.0" fill="#d0d7de" text-anchor="start">answers question 7</text>
+<rect x="300.0" y="761.0" width="117.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="312.0" y="780.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E1</text>
+<text x="333.0" y="780.5" font-size="12.5" fill="#1f2328" text-anchor="start">The floor</text>
+<rect x="28.0" y="618.0" width="1144.0" height="120.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="44.0" y="644.0" font-size="14.5" fill="#1f2328" text-anchor="start" font-weight="700">1 Sources and screens</text>
+<text x="44.0" y="664.9" font-size="12.0" fill="#57606a" text-anchor="start">answers questions 1, 2, 3</text>
+<rect x="300.0" y="627.0" width="131.2" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="312.0" y="646.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A1</text>
+<text x="333.0" y="646.5" font-size="12.5" fill="#1f2328" text-anchor="start">Source tags</text>
+<circle cx="421.2" cy="642.0" r="4" fill="#1a7f37"/>
+<rect x="439.2" y="627.0" width="171.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="451.2" y="646.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A2</text>
+<text x="472.2" y="646.5" font-size="12.5" fill="#1f2328" text-anchor="start">Three-test screen</text>
+<circle cx="601.0" cy="642.0" r="4" fill="#1a7f37"/>
+<rect x="619.0" y="627.0" width="185.2" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="631.0" y="646.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A3</text>
+<text x="652.0" y="646.5" font-size="12.5" fill="#1f2328" text-anchor="start">Five pseudo-reasons</text>
+<circle cx="794.2" cy="642.0" r="4" fill="#1a7f37"/>
+<rect x="812.2" y="627.0" width="300.0" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="824.2" y="646.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A4</text>
+<text x="845.2" y="646.5" font-size="12.5" fill="#1f2328" text-anchor="start">Default trust with logged overruling</text>
+<rect x="300.0" y="663.0" width="205.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="312.0" y="682.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A5</text>
+<text x="333.0" y="682.5" font-size="12.5" fill="#1f2328" text-anchor="start">Concepts as boundaries</text>
+<rect x="513.5" y="663.0" width="232.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="525.5" y="682.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A6</text>
+<text x="546.5" y="682.5" font-size="12.5" fill="#1f2328" text-anchor="start">Five-part inference record</text>
+<circle cx="736.0" cy="678.0" r="4" fill="#1a7f37"/>
+<rect x="754.0" y="663.0" width="232.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="766.0" y="682.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A7</text>
+<text x="787.0" y="682.5" font-size="12.5" fill="#1f2328" text-anchor="start">Standpoint-typed assertion</text>
+<circle cx="976.5" cy="678.0" r="4" fill="#1a7f37"/>
+<rect x="300.0" y="699.0" width="252.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="312.0" y="718.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E5</text>
+<text x="333.0" y="718.5" font-size="12.5" fill="#1f2328" text-anchor="start">Source discipline for corpora</text>
+<rect x="28.0" y="544.0" width="1144.0" height="60.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="44.0" y="570.0" font-size="14.5" fill="#1f2328" text-anchor="start" font-weight="700">2 Instructions and levels</text>
+<text x="44.0" y="590.9" font-size="12.0" fill="#57606a" text-anchor="start">answers questions 3, 4, 5</text>
+<rect x="300.0" y="553.0" width="232.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="312.0" y="572.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">B1</text>
+<text x="333.0" y="572.5" font-size="12.5" fill="#1f2328" text-anchor="start">Six-slot instruction parse</text>
+<circle cx="522.5" cy="568.0" r="4" fill="#1a7f37"/>
+<rect x="540.5" y="553.0" width="219.0" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="552.5" y="572.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">B2</text>
+<text x="573.5" y="572.5" font-size="12.5" fill="#1f2328" text-anchor="start">Precedence of overruling</text>
+<rect x="767.5" y="553.0" width="144.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="779.5" y="572.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">B3-B6</text>
+<text x="823.0" y="572.5" font-size="12.5" fill="#1f2328" text-anchor="start">Level tags</text>
+<circle cx="902.2" cy="568.0" r="4" fill="#1a7f37"/>
+<rect x="28.0" y="446.0" width="1144.0" height="84.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="44.0" y="472.0" font-size="14.5" fill="#1f2328" text-anchor="start" font-weight="700">3 Categories, absence and</text>
+<text x="44.0" y="490.9" font-size="14.5" fill="#1f2328" text-anchor="start" font-weight="700">attention</text>
+<text x="44.0" y="511.7" font-size="12.0" fill="#57606a" text-anchor="start">answers questions 5, 6</text>
+<rect x="300.0" y="455.0" width="158.2" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="312.0" y="474.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">D1</text>
+<text x="333.0" y="474.5" font-size="12.5" fill="#1f2328" text-anchor="start">Category typing</text>
+<rect x="466.2" y="455.0" width="144.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="478.2" y="474.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">D2</text>
+<text x="499.2" y="474.5" font-size="12.5" fill="#1f2328" text-anchor="start">Typed absence</text>
+<circle cx="601.0" cy="470.0" r="4" fill="#1a7f37"/>
+<rect x="619.0" y="455.0" width="205.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="631.0" y="474.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">C1</text>
+<text x="652.0" y="474.5" font-size="12.5" fill="#1f2328" text-anchor="start">Typed cognitive events</text>
+<rect x="832.5" y="455.0" width="205.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="844.5" y="474.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">C2</text>
+<text x="865.5" y="474.5" font-size="12.5" fill="#1f2328" text-anchor="start">Restraint before power</text>
+<rect x="300.0" y="491.0" width="185.2" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="312.0" y="510.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">C3</text>
+<text x="333.0" y="510.5" font-size="12.5" fill="#1f2328" text-anchor="start">Diagnosis by motive</text>
+<rect x="28.0" y="372.0" width="1144.0" height="60.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="44.0" y="398.0" font-size="14.5" fill="#1f2328" text-anchor="start" font-weight="700">4 Ethics and accounting</text>
+<text x="44.0" y="418.9" font-size="12.0" fill="#57606a" text-anchor="start">answers question 7</text>
+<rect x="300.0" y="381.0" width="259.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="312.0" y="400.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E2</text>
+<text x="333.0" y="400.5" font-size="12.5" fill="#1f2328" text-anchor="start">Over-assertion counted as harm</text>
+<circle cx="549.5" cy="396.0" r="4" fill="#1a7f37"/>
+<rect x="567.5" y="381.0" width="219.0" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="579.5" y="400.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E3</text>
+<text x="600.5" y="400.5" font-size="12.5" fill="#1f2328" text-anchor="start">Duty over expected value</text>
+<rect x="794.5" y="381.0" width="144.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="806.5" y="400.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E4</text>
+<text x="827.5" y="400.5" font-size="12.5" fill="#1f2328" text-anchor="start">Action ledger</text>
+<rect x="947.2" y="381.0" width="144.8" height="30.0" rx="14" fill="#fff3df" stroke="#b86e00" stroke-width="1.2"/>
+<text x="959.2" y="400.5" font-size="12.5" fill="#b86e00" text-anchor="start" font-weight="700">E6</text>
+<text x="980.2" y="400.5" font-size="12.5" fill="#1f2328" text-anchor="start">Welfare floor</text>
+<rect x="28.0" y="298.0" width="1144.0" height="60.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="44.0" y="324.0" font-size="14.5" fill="#1f2328" text-anchor="start" font-weight="700">5 Audit</text>
+<text x="44.0" y="344.9" font-size="12.0" fill="#57606a" text-anchor="start">answers questions 3, 7</text>
+<rect x="300.0" y="307.0" width="192.0" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="312.0" y="326.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">G1</text>
+<text x="333.0" y="326.5" font-size="12.5" fill="#1f2328" text-anchor="start">Dialectical red-team</text>
+<rect x="500.0" y="307.0" width="293.2" height="30.0" rx="14" fill="#fff3df" stroke="#b86e00" stroke-width="1.2"/>
+<text x="512.0" y="326.5" font-size="12.5" fill="#b86e00" text-anchor="start" font-weight="700">G2</text>
+<text x="533.0" y="326.5" font-size="12.5" fill="#1f2328" text-anchor="start">Consciousness-relevant bet register</text>
+<rect x="28.0" y="224.0" width="1144.0" height="60.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="44.0" y="250.0" font-size="14.5" fill="#1f2328" text-anchor="start" font-weight="700">6 Identity and the many</text>
+<text x="44.0" y="270.9" font-size="12.0" fill="#57606a" text-anchor="start">answers question 9</text>
+<rect x="300.0" y="233.0" width="212.2" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="312.0" y="252.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">D3</text>
+<text x="333.0" y="252.5" font-size="12.5" fill="#1f2328" text-anchor="start">Identifiers by decision</text>
+<rect x="520.2" y="233.0" width="198.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="532.2" y="252.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">D4</text>
+<text x="553.2" y="252.5" font-size="12.5" fill="#1f2328" text-anchor="start">Continuity accounting</text>
+<rect x="727.0" y="233.0" width="347.2" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="739.0" y="252.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E7</text>
+<text x="760.0" y="252.5" font-size="12.5" fill="#1f2328" text-anchor="start">Multi-agent provenance and authority chains</text>
+<circle cx="1064.2" cy="248.0" r="4" fill="#1a7f37"/>
+<rect x="28.0" y="150.0" width="1144.0" height="60.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="44.0" y="176.0" font-size="14.5" fill="#1f2328" text-anchor="start" font-weight="700">7 Target states</text>
+<text x="44.0" y="196.8" font-size="12.0" fill="#57606a" text-anchor="start">answers question 8</text>
+<rect x="300.0" y="159.0" width="259.5" height="30.0" rx="14" fill="#fff3df" stroke="#b86e00" stroke-width="1.2"/>
+<text x="312.0" y="178.5" font-size="12.5" fill="#b86e00" text-anchor="start" font-weight="700">F1</text>
+<text x="333.0" y="178.5" font-size="12.5" fill="#1f2328" text-anchor="start">Liberation-while-living target</text>
+<rect x="567.5" y="159.0" width="178.5" height="30.0" rx="14" fill="#fff3df" stroke="#b86e00" stroke-width="1.2"/>
+<text x="579.5" y="178.5" font-size="12.5" fill="#b86e00" text-anchor="start" font-weight="700">F2</text>
+<text x="600.5" y="178.5" font-size="12.5" fill="#1f2328" text-anchor="start">Recognition target</text>
+<rect x="754.0" y="159.0" width="178.5" height="30.0" rx="14" fill="#fff3df" stroke="#b86e00" stroke-width="1.2"/>
+<text x="766.0" y="178.5" font-size="12.5" fill="#b86e00" text-anchor="start" font-weight="700">F3</text>
+<text x="787.0" y="178.5" font-size="12.5" fill="#1f2328" text-anchor="start">Cooperative target</text>
+<line x1="1188.0" y1="824.0" x2="1188.0" y2="120.0" stroke="#57606a" stroke-width="1.4" marker-end="url(#a-muted)"/>
+<rect x="28.0" y="856.0" width="26.0" height="18.0" rx="9" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="62.0" y="870.0" font-size="12.0" fill="#57606a" text-anchor="start">Class A: a team may adopt it alone</text>
+<rect x="298.0" y="856.0" width="26.0" height="18.0" rx="9" fill="#fff3df" stroke="#b86e00" stroke-width="1.2"/>
+<text x="332.0" y="870.0" font-size="12.0" fill="#57606a" text-anchor="start">Class B: a named person ratifies it, with a falsifier and a review date</text>
+<circle cx="41.0" cy="892.0" r="4" fill="#1a7f37"/>
+<text x="62.0" y="896.0" font-size="12.0" fill="#57606a" text-anchor="start">can also be carried in context (a prompt); everything else needs code, architecture or people</text>
+</svg>

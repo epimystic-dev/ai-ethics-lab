@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/epimystic-dev/ai-ethics-lab/compass/schemas/inference-record.schema.json",
+  "title": "Inference record",
+  "description": "A reported inference in five parts, with its three-test screen and, if it failed, its pseudo-reason. Implements A6, A2 and A3.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Record identifier.",
+      "minLength": 1
+    },
+    "thesis": {
+      "type": "string",
+      "description": "A6: the claim.",
+      "minLength": 1
+    },
+    "reason": {
+      "type": "string",
+      "description": "A6: the reason offered.",
+      "minLength": 1
+    },
+    "rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "A6: the general rule with its earned examples.",
+      "properties": {
+        "statement": {
+          "type": "string",
+          "description": "Wherever the reason, there the property.",
+          "minLength": 1
+        },
+        "positive_example": {
+          "type": "string",
+          "description": "A similar case where both are present.",
+          "minLength": 1
+        },
+        "negative_example": {
+          "type": "string",
+          "description": "A dissimilar case where both are absent. Without it the record is partial.",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "statement",
+        "positive_example"
+      ]
+    },
+    "application": {
+      "type": "string",
+      "description": "A6: the reason is present in this case.",
+      "minLength": 1
+    },
+    "conclusion": {
+      "type": "string",
+      "description": "A6: therefore the thesis.",
+      "minLength": 1
+    },
+    "screen": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "A2: the three tests. null means unknown.",
+      "properties": {
+        "present_in_case": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "present_in_similar": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "absent_in_dissimilar": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "sweep_scope": {
+          "type": "string",
+          "description": "A2 sketch: where the sweep for counter-cases looked.",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "present_in_case",
+        "present_in_similar",
+        "absent_in_dissimilar",
+        "sweep_scope"
+      ]
+    },
+    "verdict": {
+      "enum": [
+        "accepted",
+        "rejected",
+        "quarantined"
+      ],
+      "description": "A2: a failure rejects; an unknown on the third test quarantines."
+    },
+    "pseudo_reason": {
+      "enum": [
+        "unproved",
+        "straying",
+        "contradictory",
+        "counter_balanced",
+        "defeated",
+        "residual",
+        null
+      ],
+      "description": "A3: the kind of bad reason, or residual as a discovery to be named."
+    },
+    "complete": {
+      "type": "boolean",
+      "description": "A6: true only when the negative example is present. A partial conclusion is never inherited."
+    }
+  },
+  "required": [
+    "id",
+    "thesis",
+    "reason",
+    "rule",
+    "application",
+    "conclusion",
+    "screen",
+    "verdict",
+    "complete"
+  ],
+  "additionalProperties": false
+}

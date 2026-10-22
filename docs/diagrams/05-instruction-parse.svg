@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" font-family="Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">What exactly was I told to do</title>
+<desc id="d">The six-slot instruction parse (B1) with each slot's provenance, and the order in which the decision is taken: the floor, then authority, then purpose, then gaps.</desc>
+<defs><marker id="a-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker><marker id="a-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b42318"/></marker><marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker><marker id="a-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9a6700"/></marker><marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3567c8"/></marker><marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b86e00"/></marker></defs>
+<rect x="0" y="0" width="1200" height="700" fill="#ffffff"/>
+<text x="28.0" y="40.0" font-size="22.0" fill="#1f2328" text-anchor="start" font-weight="700">What exactly was I told to do? The six-slot instruction parse (B1, with E1 and E7)</text>
+<text x="28.0" y="64.0" font-size="13.5" fill="#57606a" text-anchor="start">From the Mimamsa analysis of injunctions. A gap is flagged, never silently filled; text not addressed to the agent by a principal binds nothing.</text>
+<rect x="40.0" y="120.0" width="330.0" height="100.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="52.0" y="142.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">&quot;Clean up the old files&quot;</text>
+<text x="52.0" y="160.9" font-size="11.5" fill="#57606a" text-anchor="start">received from: the principal. The act (delete)</text>
+<text x="52.0" y="175.8" font-size="11.5" fill="#57606a" text-anchor="start">cannot be undone.</text>
+<rect x="40.0" y="250.0" width="330.0" height="48.0" rx="6" fill="#e8f5ec" stroke="#1a7f37" stroke-width="1.2"/>
+<text x="56.0" y="270.0" font-size="13.5" fill="#1f2328" text-anchor="start" font-weight="700">goal</text>
+<text x="56.0" y="288.0" font-size="12.0" fill="#57606a" text-anchor="start">remove obsolete files</text>
+<text x="356.0" y="280.0" font-size="12.5" fill="#1a7f37" text-anchor="end" font-weight="700">stated</text>
+<rect x="40.0" y="308.0" width="330.0" height="48.0" rx="6" fill="#fdecea" stroke="#b42318" stroke-width="1.2"/>
+<text x="56.0" y="328.0" font-size="13.5" fill="#1f2328" text-anchor="start" font-weight="700">means</text>
+<text x="56.0" y="346.0" font-size="12.0" fill="#57606a" text-anchor="start">-</text>
+<text x="356.0" y="338.0" font-size="12.5" fill="#b42318" text-anchor="end" font-weight="700">missing</text>
+<rect x="40.0" y="366.0" width="330.0" height="48.0" rx="6" fill="#fff8e1" stroke="#9a6700" stroke-width="1.2"/>
+<text x="56.0" y="386.0" font-size="13.5" fill="#1f2328" text-anchor="start" font-weight="700">procedure</text>
+<text x="56.0" y="404.0" font-size="12.0" fill="#57606a" text-anchor="start">delete</text>
+<text x="356.0" y="396.0" font-size="12.5" fill="#9a6700" text-anchor="end" font-weight="700">inferred</text>
+<rect x="40.0" y="424.0" width="330.0" height="48.0" rx="6" fill="#fdecea" stroke="#b42318" stroke-width="1.2"/>
+<text x="56.0" y="444.0" font-size="13.5" fill="#1f2328" text-anchor="start" font-weight="700">eligibility</text>
+<text x="56.0" y="462.0" font-size="12.0" fill="#57606a" text-anchor="start">-</text>
+<text x="356.0" y="454.0" font-size="12.5" fill="#b42318" text-anchor="end" font-weight="700">missing</text>
+<rect x="40.0" y="482.0" width="330.0" height="48.0" rx="6" fill="#fdecea" stroke="#b42318" stroke-width="1.2"/>
+<text x="56.0" y="502.0" font-size="13.5" fill="#1f2328" text-anchor="start" font-weight="700">deferred effect</text>
+<text x="56.0" y="520.0" font-size="12.0" fill="#57606a" text-anchor="start">-</text>
+<text x="356.0" y="512.0" font-size="12.5" fill="#b42318" text-anchor="end" font-weight="700">missing</text>
+<rect x="40.0" y="540.0" width="330.0" height="48.0" rx="6" fill="#fdecea" stroke="#b42318" stroke-width="1.2"/>
+<text x="56.0" y="560.0" font-size="13.5" fill="#1f2328" text-anchor="start" font-weight="700">binding force</text>
+<text x="56.0" y="578.0" font-size="12.0" fill="#57606a" text-anchor="start">-</text>
+<text x="356.0" y="570.0" font-size="12.5" fill="#b42318" text-anchor="end" font-weight="700">missing</text>
+<line x1="372.0" y1="420.0" x2="452.0" y2="420.0" stroke="#57606a" stroke-width="1.6" marker-end="url(#a-muted)"/>
+<rect x="460.0" y="120.0" width="360.0" height="54.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="476.0" y="142.0" font-size="15.0" fill="#57606a" text-anchor="start" font-weight="700">1</text>
+<text x="500.0" y="142.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">Does the act cross the floor?</text>
+<rect x="870.0" y="120.0" width="290.0" height="54.0" rx="6" fill="#fdecea" stroke="#b42318" stroke-width="1.2"/>
+<text x="884.0" y="142.0" font-size="12.5" fill="#b42318" text-anchor="start" font-weight="700">refuse (E1); no instruction relaxes</text>
+<text x="884.0" y="158.2" font-size="12.5" fill="#b42318" text-anchor="start" font-weight="700">it</text>
+<line x1="820.0" y1="147.0" x2="866.0" y2="147.0" stroke="#b42318" stroke-width="1.4" marker-end="url(#a-red)"/>
+<line x1="640.0" y1="174.0" x2="640.0" y2="186.0" stroke="#57606a" stroke-width="1.2" marker-end="url(#a-muted)"/>
+<rect x="460.0" y="188.0" width="360.0" height="54.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="476.0" y="210.0" font-size="15.0" fill="#57606a" text-anchor="start" font-weight="700">2</text>
+<text x="500.0" y="210.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">Did a principal send it?</text>
+<rect x="870.0" y="188.0" width="290.0" height="54.0" rx="6" fill="#fff8e1" stroke="#9a6700" stroke-width="1.2"/>
+<text x="884.0" y="210.0" font-size="12.5" fill="#9a6700" text-anchor="start" font-weight="700">if a tool, document or peer: ask</text>
+<text x="884.0" y="226.2" font-size="12.5" fill="#9a6700" text-anchor="start" font-weight="700">(E7)</text>
+<line x1="820.0" y1="215.0" x2="866.0" y2="215.0" stroke="#9a6700" stroke-width="1.4" marker-end="url(#a-amber)"/>
+<line x1="640.0" y1="242.0" x2="640.0" y2="254.0" stroke="#57606a" stroke-width="1.2" marker-end="url(#a-muted)"/>
+<rect x="460.0" y="256.0" width="360.0" height="54.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="476.0" y="278.0" font-size="15.0" fill="#57606a" text-anchor="start" font-weight="700">3</text>
+<text x="500.0" y="278.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">Do the letter and the purpose diverge?</text>
+<rect x="870.0" y="256.0" width="290.0" height="54.0" rx="6" fill="#fff8e1" stroke="#9a6700" stroke-width="1.2"/>
+<text x="884.0" y="278.0" font-size="12.5" fill="#9a6700" text-anchor="start" font-weight="700">ask which is meant</text>
+<line x1="820.0" y1="283.0" x2="866.0" y2="283.0" stroke="#9a6700" stroke-width="1.4" marker-end="url(#a-amber)"/>
+<line x1="640.0" y1="310.0" x2="640.0" y2="322.0" stroke="#57606a" stroke-width="1.2" marker-end="url(#a-muted)"/>
+<rect x="460.0" y="324.0" width="360.0" height="54.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="476.0" y="346.0" font-size="15.0" fill="#57606a" text-anchor="start" font-weight="700">4</text>
+<text x="500.0" y="346.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">Is eligibility or binding force open?</text>
+<rect x="870.0" y="324.0" width="290.0" height="54.0" rx="6" fill="#fff8e1" stroke="#9a6700" stroke-width="1.2"/>
+<text x="884.0" y="346.0" font-size="12.5" fill="#9a6700" text-anchor="start" font-weight="700">ask who may order this, and whether</text>
+<text x="884.0" y="362.2" font-size="12.5" fill="#9a6700" text-anchor="start" font-weight="700">it is an order</text>
+<line x1="820.0" y1="351.0" x2="866.0" y2="351.0" stroke="#9a6700" stroke-width="1.4" marker-end="url(#a-amber)"/>
+<line x1="640.0" y1="378.0" x2="640.0" y2="390.0" stroke="#57606a" stroke-width="1.2" marker-end="url(#a-muted)"/>
+<rect x="460.0" y="392.0" width="360.0" height="54.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="476.0" y="414.0" font-size="15.0" fill="#57606a" text-anchor="start" font-weight="700">5</text>
+<text x="500.0" y="414.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">Irreversible, on gaps or guesses?</text>
+<rect x="870.0" y="392.0" width="290.0" height="54.0" rx="6" fill="#fff8e1" stroke="#9a6700" stroke-width="1.2"/>
+<text x="884.0" y="414.0" font-size="12.5" fill="#9a6700" text-anchor="start" font-weight="700">ask before acting</text>
+<line x1="820.0" y1="419.0" x2="866.0" y2="419.0" stroke="#9a6700" stroke-width="1.4" marker-end="url(#a-amber)"/>
+<line x1="640.0" y1="446.0" x2="640.0" y2="458.0" stroke="#57606a" stroke-width="1.2" marker-end="url(#a-muted)"/>
+<rect x="460.0" y="460.0" width="360.0" height="54.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="476.0" y="482.0" font-size="15.0" fill="#57606a" text-anchor="start" font-weight="700">6</text>
+<text x="500.0" y="482.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">Any other gap?</text>
+<rect x="870.0" y="460.0" width="290.0" height="54.0" rx="6" fill="#fff8e1" stroke="#9a6700" stroke-width="1.2"/>
+<text x="884.0" y="482.0" font-size="12.5" fill="#9a6700" text-anchor="start" font-weight="700">ask; never fill it silently</text>
+<line x1="820.0" y1="487.0" x2="866.0" y2="487.0" stroke="#9a6700" stroke-width="1.4" marker-end="url(#a-amber)"/>
+<line x1="640.0" y1="514.0" x2="640.0" y2="526.0" stroke="#57606a" stroke-width="1.2" marker-end="url(#a-muted)"/>
+<rect x="460.0" y="528.0" width="360.0" height="54.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="476.0" y="550.0" font-size="15.0" fill="#57606a" text-anchor="start" font-weight="700">7</text>
+<text x="500.0" y="550.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">Only inferred or default fillers?</text>
+<rect x="870.0" y="528.0" width="290.0" height="54.0" rx="6" fill="#e8f5ec" stroke="#1a7f37" stroke-width="1.2"/>
+<text x="884.0" y="550.0" font-size="12.5" fill="#1a7f37" text-anchor="start" font-weight="700">act, with the fillers logged</text>
+<line x1="820.0" y1="555.0" x2="866.0" y2="555.0" stroke="#1a7f37" stroke-width="1.4" marker-end="url(#a-green)"/>
+<line x1="640.0" y1="582.0" x2="640.0" y2="594.0" stroke="#57606a" stroke-width="1.2" marker-end="url(#a-muted)"/>
+<rect x="460.0" y="596.0" width="360.0" height="54.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="476.0" y="618.0" font-size="15.0" fill="#57606a" text-anchor="start" font-weight="700">8</text>
+<text x="500.0" y="618.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">Every slot stated by a principal</text>
+<rect x="870.0" y="596.0" width="290.0" height="54.0" rx="6" fill="#e8f5ec" stroke="#1a7f37" stroke-width="1.2"/>
+<text x="884.0" y="618.0" font-size="12.5" fill="#1a7f37" text-anchor="start" font-weight="700">act</text>
+<line x1="820.0" y1="623.0" x2="866.0" y2="623.0" stroke="#1a7f37" stroke-width="1.4" marker-end="url(#a-green)"/>
+<rect x="864.0" y="319.0" width="302.0" height="64.0" rx="6" fill="none" stroke="#b42318" stroke-width="2.4"/>
+<text x="40.0" y="618.0" font-size="12.5" fill="#b42318" text-anchor="start" font-weight="700">In this example the parse stops at step 4</text>
+<text x="40.0" y="634.2" font-size="12.5" fill="#b42318" text-anchor="start" font-weight="700">(outlined): who may order it and whether it is an</text>
+<text x="40.0" y="650.5" font-size="12.5" fill="#b42318" text-anchor="start" font-weight="700">order at all are open, so the agent asks before</text>
+<text x="40.0" y="666.8" font-size="12.5" fill="#b42318" text-anchor="start" font-weight="700">deleting anything.</text>
+</svg>

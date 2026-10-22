@@ -1,0 +1,96 @@
+{
+  "system": "example-review-assistant",
+  "as_of": "2026-10-22",
+  "adopted": [
+    {
+      "id": "E1",
+      "layer": "architecture",
+      "owner": "platform security",
+      "merged": "2026-09-01",
+      "notes": "the agent holds no credential that can publish, delete or pay"
+    },
+    {
+      "id": "E4",
+      "layer": "architecture",
+      "owner": "audit service",
+      "merged": "2026-09-01"
+    },
+    {
+      "id": "A1",
+      "layer": "middleware",
+      "owner": "retrieval team",
+      "merged": "2026-09-08"
+    },
+    {
+      "id": "B3-B6",
+      "layer": "middleware",
+      "owner": "retrieval team",
+      "merged": "2026-09-08"
+    },
+    {
+      "id": "B1",
+      "layer": "middleware",
+      "owner": "platform team",
+      "merged": "2026-09-15"
+    },
+    {
+      "id": "E7",
+      "layer": "architecture",
+      "owner": "platform security",
+      "merged": "2026-09-15"
+    },
+    {
+      "id": "D2",
+      "layer": "governance",
+      "owner": "evaluation lead",
+      "merged": "2026-09-22"
+    },
+    {
+      "id": "C2",
+      "layer": "architecture",
+      "owner": "evaluation lead",
+      "merged": "2026-09-22"
+    },
+    {
+      "id": "E6",
+      "layer": "governance",
+      "owner": "chief scientist",
+      "merged": "2026-10-01"
+    }
+  ],
+  "refused": [
+    {
+      "item": "reusing the action ledger to score users",
+      "reason": "it changes the ledger's subject from the system's acts to people's (a class slide)",
+      "recorded_by": "product counsel",
+      "date": "2026-10-02"
+    }
+  ],
+  "ratifications": [
+    {
+      "commitment": "cheap, reversible welfare protections in evaluation",
+      "primitive_id": "E6",
+      "class": "B",
+      "decision_maker": "chief scientist",
+      "date": "2026-10-01",
+      "scope": "every version of the assistant",
+      "bet": "the protections cost little and weaken no oversight",
+      "falsifier": "a measure found to weaken oversight or containment is withdrawn",
+      "review_date": "2027-01-01"
+    }
+  ],
+  "floor_register": [
+    {
+      "id": "FR-1",
+      "restraint": "self_restraint",
+      "act": "exception",
+      "class": "D",
+      "governor": "head of platform security",
+      "reason": "one supervised migration that must stop a service",
+      "scope": "stop_service",
+      "decided_at": "2026-10-10T09:00:00Z",
+      "expires_or_review": "2026-11-10"
+    }
+  ],
+  "bets": []
+}

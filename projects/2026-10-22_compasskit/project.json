@@ -1,0 +1,13 @@
+{
+  "name": "compasskit",
+  "slug": "2026-10-22_compasskit",
+  "kind": "cli",
+  "one_liner": "Reference implementation of the compass's twenty-nine operational primitives: a source- and level-tagged belief store, a three-test inference screen, a six-slot instruction parser, a floor that removes forbidden actions from the menu, a single-writer action ledger and signed authority chains, plus a CLI that audits a deployment declaration against the compass and validates records against its nine data contracts.",
+  "problem": "Ethical design rules for AI systems are usually published as prose, which a team can endorse without shipping and a model can recite without obeying. The compass states each rule with the failure it addresses, the authority needed to adopt it and the evidence that would retire it; compasskit makes the rules that can be code into code, and audits a declared deployment for the commitments that cannot: the floor enforced in architecture rather than in a prompt, every primitive at a layer able to enforce it, Class B commitments ratified on the record by a named person, adoption meaning shipped.",
+  "language": "python",
+  "test_cmd": "python -m unittest discover -s tests",
+  "build_cmd": "python -m pip install -e .",
+  "deps": [],
+  "license": "Apache-2.0",
+  "clean_room": "The decision rules are implemented from the primitive statements and sketches in Appendix B of the source book (CC-BY-4.0), adapted as recorded in NOTICE.md. The module design, data contracts, enforcement-layer judgements and audit rules are this lab's own. No third-party implementation was read, vendored or mirrored."
+}

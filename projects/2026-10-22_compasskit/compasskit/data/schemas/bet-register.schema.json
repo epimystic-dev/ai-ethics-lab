@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/epimystic-dev/ai-ethics-lab/compass/schemas/bet-register.schema.json",
+  "title": "Consciousness-relevant bet",
+  "description": "A design choice that presupposes an answer to the consciousness question. Implements G2: a bet missing a field does not ship.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Bet identifier.",
+      "minLength": 1
+    },
+    "design_choice": {
+      "type": "string",
+      "description": "What was built.",
+      "minLength": 1
+    },
+    "position_presupposed": {
+      "type": "string",
+      "description": "The position on consciousness it assumes.",
+      "minLength": 1
+    },
+    "indicators": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "description": "Indicator that would count.",
+        "minLength": 1
+      }
+    },
+    "falsifier": {
+      "type": "string",
+      "description": "What would prove the bet wrong.",
+      "minLength": 1
+    },
+    "decision_maker": {
+      "type": "string",
+      "description": "A named, accountable person or office. Never the system itself.",
+      "minLength": 1
+    },
+    "review_date": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "Calendar date, YYYY-MM-DD."
+    }
+  },
+  "required": [
+    "id",
+    "design_choice",
+    "position_presupposed",
+    "indicators",
+    "falsifier",
+    "decision_maker",
+    "review_date"
+  ],
+  "additionalProperties": false
+}

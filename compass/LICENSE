@@ -1,0 +1,16 @@
+The contents of this directory (compass.json, compass.schema.json, schemas/ and prompts/)
+are licensed under the Creative Commons Attribution 4.0 International licence (CC-BY-4.0).
+
+  Licence summary: https://creativecommons.org/licenses/by/4.0/
+  Legal code:      https://creativecommons.org/licenses/by/4.0/legalcode
+
+compass.json is adapted from Appendix B, "Operational Primitives Catalogue", of
+"The Philosophical and Ethical Compass for Artificial Intelligence: A Reading of the
+Indian Tradition for the Architects of Machine Mind" (first edition, October 2026), which
+its author released under CC-BY-4.0. Changes were made; they are listed in compass.json
+under source.changes and in NOTICE.md at the repository root.
+
+You may share and adapt this material for any purpose, including commercially, provided
+you give appropriate credit, link to the licence, and indicate if changes were made. A
+suggested credit line is in NOTICE.md. No additional restrictions are imposed, and nothing
+here is a warranty: the material is provided as-is.

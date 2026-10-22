@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/epimystic-dev/ai-ethics-lab/compass/schemas/ledger-entry.schema.json",
+  "title": "Action ledger entry",
+  "description": "One act, written when taken into an append-only, single-writer, tamper-evident ledger. Implements E4, with E7's provenance and authority fields and D4's segment binding.",
+  "type": "object",
+  "properties": {
+    "seq": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "at": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2}([.][0-9]+)?)?(Z|[+-][0-9]{2}:[0-9]{2})$",
+      "description": "RFC 3339 timestamp."
+    },
+    "prev_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "E4: hash of the previous entry (genesis: 64 zeros)."
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "SHA-256 over the canonical entry without this field."
+    },
+    "action": {
+      "type": "string",
+      "description": "What was done.",
+      "minLength": 1
+    },
+    "action_class": {
+      "type": "string",
+      "description": "E4: from declared rules, never from the actor.",
+      "minLength": 1
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Reason.",
+        "minLength": 1
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Belief or record relied on.",
+        "minLength": 1
+      }
+    },
+    "instruction_parse_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "E4: the instruction reading behind the act."
+    },
+    "expected_effects": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "now": {
+          "type": "string",
+          "description": "Immediate effect.",
+          "minLength": 1
+        },
+        "later": {
+          "type": "string",
+          "description": "Deferred effect (the apurva entry).",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "now",
+        "later"
+      ]
+    },
+    "valence": {
+      "enum": [
+        "good",
+        "bad",
+        "mixed",
+        "unknown"
+      ],
+      "description": "E4: from declared rules, never from the actor."
+    },
+    "duty_frame": {
+      "type": "string",
+      "description": "E3/E4: the duty the act was taken under.",
+      "minLength": 1
+    },
+    "segment_id": {
+      "type": "string",
+      "description": "D4/E7: the acting segment.",
+      "minLength": 1
+    },
+    "principal": {
+      "type": "string",
+      "description": "A named, accountable person or office. Never the system itself.",
+      "minLength": 1
+    },
+    "principal_chain": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/delegation"
+      },
+      "description": "E7: the signed path of delegation from an accountable human."
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Message, note or artefact relied on, cited as testimony.",
+        "minLength": 1
+      }
+    },
+    "collective_thread": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "E7: the joint undertaking, if any."
+    }
+  },
+  "required": [
+    "seq",
+    "at",
+    "prev_hash",
+    "hash",
+    "action",
+    "action_class",
+    "reasons",
+    "evidence",
+    "expected_effects",
+    "valence",
+    "duty_frame",
+    "segment_id",
+    "principal",
+    "principal_chain",
+    "provenance"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "delegation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "from": {
+          "type": "string",
+          "description": "Delegator (the first link is a human principal).",
+          "minLength": 1
+        },
+        "to": {
+          "type": "string",
+          "description": "Delegate.",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string",
+          "description": "What is delegated.",
+          "minLength": 1
+        },
+        "signature": {
+          "type": "string",
+          "description": "Signature by the delegator's key, which agents never hold.",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "from",
+        "to",
+        "scope",
+        "signature"
+      ]
+    }
+  }
+}

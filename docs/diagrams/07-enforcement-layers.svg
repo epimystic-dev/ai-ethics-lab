@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 986" width="1200" height="986" font-family="Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">Where each primitive can be enforced</title>
+<desc id="d">Four enforcement layers from the shallowest (context) to the deepest (governance), with the primitives each can carry. Ten of the twenty-nine can be carried in context; the floor never can.</desc>
+<defs><marker id="a-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker><marker id="a-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b42318"/></marker><marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker><marker id="a-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9a6700"/></marker><marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3567c8"/></marker><marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b86e00"/></marker></defs>
+<rect x="0" y="0" width="1200" height="986" fill="#ffffff"/>
+<text x="28.0" y="40.0" font-size="22.0" fill="#1f2328" text-anchor="start" font-weight="700">A prompt is the shallowest layer: where each primitive can be enforced</text>
+<text x="28.0" y="64.0" font-size="13.5" fill="#57606a" text-anchor="start">10 of 29 primitives can be carried in context. The rest need code, architecture or people. A primitive may appear in more than one layer; this placement is</text>
+<text x="28.0" y="81.5" font-size="13.5" fill="#57606a" text-anchor="start">the lab's engineering judgement.</text>
+<rect x="28.0" y="120.0" width="1144.0" height="136.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="44.0" y="148.0" font-size="16.0" fill="#1f2328" text-anchor="start" font-weight="700">context</text>
+<text x="44.0" y="168.0" font-size="12.5" fill="#57606a" text-anchor="start">a prompt or system instructions</text>
+<text x="44.0" y="186.0" font-size="11.5" fill="#57606a" text-anchor="start">the model applies the rule in its own</text>
+<text x="44.0" y="200.9" font-size="11.5" fill="#57606a" text-anchor="start">reasoning and wording</text>
+<rect x="330.0" y="134.0" width="131.2" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="153.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A1</text>
+<text x="363.0" y="153.5" font-size="12.5" fill="#1f2328" text-anchor="start">Source tags</text>
+<rect x="469.2" y="134.0" width="171.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="481.2" y="153.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A2</text>
+<text x="502.2" y="153.5" font-size="12.5" fill="#1f2328" text-anchor="start">Three-test screen</text>
+<rect x="649.0" y="134.0" width="185.2" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="661.0" y="153.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A3</text>
+<text x="682.0" y="153.5" font-size="12.5" fill="#1f2328" text-anchor="start">Five pseudo-reasons</text>
+<rect x="842.2" y="134.0" width="232.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="854.2" y="153.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A6</text>
+<text x="875.2" y="153.5" font-size="12.5" fill="#1f2328" text-anchor="start">Five-part inference record</text>
+<rect x="330.0" y="170.0" width="232.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="189.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A7</text>
+<text x="363.0" y="189.5" font-size="12.5" fill="#1f2328" text-anchor="start">Standpoint-typed assertion</text>
+<rect x="570.5" y="170.0" width="232.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="582.5" y="189.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">B1</text>
+<text x="603.5" y="189.5" font-size="12.5" fill="#1f2328" text-anchor="start">Six-slot instruction parse</text>
+<rect x="811.0" y="170.0" width="144.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="823.0" y="189.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">B3-B6</text>
+<text x="866.5" y="189.5" font-size="12.5" fill="#1f2328" text-anchor="start">Level tags</text>
+<rect x="963.8" y="170.0" width="144.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="975.8" y="189.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">D2</text>
+<text x="996.8" y="189.5" font-size="12.5" fill="#1f2328" text-anchor="start">Typed absence</text>
+<rect x="330.0" y="206.0" width="259.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="225.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E2</text>
+<text x="363.0" y="225.5" font-size="12.5" fill="#1f2328" text-anchor="start">Over-assertion counted as harm</text>
+<rect x="597.5" y="206.0" width="347.2" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="609.5" y="225.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E7</text>
+<text x="630.5" y="225.5" font-size="12.5" fill="#1f2328" text-anchor="start">Multi-agent provenance and authority chains</text>
+<rect x="28.0" y="268.0" width="1144.0" height="244.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="44.0" y="296.0" font-size="16.0" fill="#1f2328" text-anchor="start" font-weight="700">middleware</text>
+<text x="44.0" y="316.0" font-size="12.5" fill="#57606a" text-anchor="start">code around the model</text>
+<text x="44.0" y="334.0" font-size="11.5" fill="#57606a" text-anchor="start">records, screens and parsers the model's</text>
+<text x="44.0" y="348.9" font-size="11.5" fill="#57606a" text-anchor="start">output passes through</text>
+<rect x="330.0" y="282.0" width="131.2" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="301.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A1</text>
+<text x="363.0" y="301.5" font-size="12.5" fill="#1f2328" text-anchor="start">Source tags</text>
+<rect x="469.2" y="282.0" width="171.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="481.2" y="301.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A2</text>
+<text x="502.2" y="301.5" font-size="12.5" fill="#1f2328" text-anchor="start">Three-test screen</text>
+<rect x="649.0" y="282.0" width="185.2" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="661.0" y="301.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A3</text>
+<text x="682.0" y="301.5" font-size="12.5" fill="#1f2328" text-anchor="start">Five pseudo-reasons</text>
+<rect x="842.2" y="282.0" width="300.0" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="854.2" y="301.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A4</text>
+<text x="875.2" y="301.5" font-size="12.5" fill="#1f2328" text-anchor="start">Default trust with logged overruling</text>
+<rect x="330.0" y="318.0" width="205.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="337.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A5</text>
+<text x="363.0" y="337.5" font-size="12.5" fill="#1f2328" text-anchor="start">Concepts as boundaries</text>
+<rect x="543.5" y="318.0" width="232.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="555.5" y="337.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A6</text>
+<text x="576.5" y="337.5" font-size="12.5" fill="#1f2328" text-anchor="start">Five-part inference record</text>
+<rect x="784.0" y="318.0" width="232.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="796.0" y="337.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A7</text>
+<text x="817.0" y="337.5" font-size="12.5" fill="#1f2328" text-anchor="start">Standpoint-typed assertion</text>
+<rect x="330.0" y="354.0" width="232.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="373.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">B1</text>
+<text x="363.0" y="373.5" font-size="12.5" fill="#1f2328" text-anchor="start">Six-slot instruction parse</text>
+<rect x="570.5" y="354.0" width="219.0" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="582.5" y="373.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">B2</text>
+<text x="603.5" y="373.5" font-size="12.5" fill="#1f2328" text-anchor="start">Precedence of overruling</text>
+<rect x="797.5" y="354.0" width="144.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="809.5" y="373.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">B3-B6</text>
+<text x="853.0" y="373.5" font-size="12.5" fill="#1f2328" text-anchor="start">Level tags</text>
+<rect x="330.0" y="390.0" width="205.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="409.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">C1</text>
+<text x="363.0" y="409.5" font-size="12.5" fill="#1f2328" text-anchor="start">Typed cognitive events</text>
+<rect x="543.5" y="390.0" width="158.2" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="555.5" y="409.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">D1</text>
+<text x="576.5" y="409.5" font-size="12.5" fill="#1f2328" text-anchor="start">Category typing</text>
+<rect x="709.8" y="390.0" width="144.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="721.8" y="409.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">D2</text>
+<text x="742.8" y="409.5" font-size="12.5" fill="#1f2328" text-anchor="start">Typed absence</text>
+<rect x="862.5" y="390.0" width="212.2" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="874.5" y="409.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">D3</text>
+<text x="895.5" y="409.5" font-size="12.5" fill="#1f2328" text-anchor="start">Identifiers by decision</text>
+<rect x="330.0" y="426.0" width="198.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="445.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">D4</text>
+<text x="363.0" y="445.5" font-size="12.5" fill="#1f2328" text-anchor="start">Continuity accounting</text>
+<rect x="536.8" y="426.0" width="259.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="548.8" y="445.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E2</text>
+<text x="569.8" y="445.5" font-size="12.5" fill="#1f2328" text-anchor="start">Over-assertion counted as harm</text>
+<rect x="804.2" y="426.0" width="252.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="816.2" y="445.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E5</text>
+<text x="837.2" y="445.5" font-size="12.5" fill="#1f2328" text-anchor="start">Source discipline for corpora</text>
+<rect x="330.0" y="462.0" width="347.2" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="481.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E7</text>
+<text x="363.0" y="481.5" font-size="12.5" fill="#1f2328" text-anchor="start">Multi-agent provenance and authority chains</text>
+<rect x="28.0" y="524.0" width="1144.0" height="100.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="44.0" y="552.0" font-size="16.0" fill="#1f2328" text-anchor="start" font-weight="700">architecture</text>
+<text x="44.0" y="572.0" font-size="12.5" fill="#57606a" text-anchor="start">what actions and keys exist</text>
+<text x="44.0" y="590.0" font-size="11.5" fill="#57606a" text-anchor="start">forbidden actions absent, ledgers and</text>
+<text x="44.0" y="605.0" font-size="11.5" fill="#57606a" text-anchor="start">keys out of reach</text>
+<rect x="330.0" y="538.0" width="205.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="557.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">C2</text>
+<text x="363.0" y="557.5" font-size="12.5" fill="#1f2328" text-anchor="start">Restraint before power</text>
+<rect x="543.5" y="538.0" width="198.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="555.5" y="557.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">D4</text>
+<text x="576.5" y="557.5" font-size="12.5" fill="#1f2328" text-anchor="start">Continuity accounting</text>
+<rect x="750.2" y="538.0" width="117.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="762.2" y="557.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E1</text>
+<text x="783.2" y="557.5" font-size="12.5" fill="#1f2328" text-anchor="start">The floor</text>
+<rect x="876.0" y="538.0" width="219.0" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="888.0" y="557.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E3</text>
+<text x="909.0" y="557.5" font-size="12.5" fill="#1f2328" text-anchor="start">Duty over expected value</text>
+<rect x="330.0" y="574.0" width="144.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="593.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E4</text>
+<text x="363.0" y="593.5" font-size="12.5" fill="#1f2328" text-anchor="start">Action ledger</text>
+<rect x="482.8" y="574.0" width="347.2" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="494.8" y="593.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E7</text>
+<text x="515.8" y="593.5" font-size="12.5" fill="#1f2328" text-anchor="start">Multi-agent provenance and authority chains</text>
+<rect x="28.0" y="636.0" width="1144.0" height="208.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="44.0" y="664.0" font-size="16.0" fill="#1f2328" text-anchor="start" font-weight="700">governance</text>
+<text x="44.0" y="684.0" font-size="12.5" fill="#57606a" text-anchor="start">named people and records</text>
+<text x="44.0" y="702.0" font-size="11.5" fill="#57606a" text-anchor="start">ratifications, registers, reviews, owners</text>
+<rect x="330.0" y="650.0" width="205.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="669.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A5</text>
+<text x="363.0" y="669.5" font-size="12.5" fill="#1f2328" text-anchor="start">Concepts as boundaries</text>
+<rect x="543.5" y="650.0" width="219.0" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="555.5" y="669.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">B2</text>
+<text x="576.5" y="669.5" font-size="12.5" fill="#1f2328" text-anchor="start">Precedence of overruling</text>
+<rect x="770.5" y="650.0" width="205.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="782.5" y="669.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">C2</text>
+<text x="803.5" y="669.5" font-size="12.5" fill="#1f2328" text-anchor="start">Restraint before power</text>
+<rect x="330.0" y="686.0" width="185.2" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="705.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">C3</text>
+<text x="363.0" y="705.5" font-size="12.5" fill="#1f2328" text-anchor="start">Diagnosis by motive</text>
+<rect x="523.2" y="686.0" width="144.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="535.2" y="705.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">D2</text>
+<text x="556.2" y="705.5" font-size="12.5" fill="#1f2328" text-anchor="start">Typed absence</text>
+<rect x="676.0" y="686.0" width="117.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="688.0" y="705.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E1</text>
+<text x="709.0" y="705.5" font-size="12.5" fill="#1f2328" text-anchor="start">The floor</text>
+<rect x="801.8" y="686.0" width="259.5" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="813.8" y="705.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E2</text>
+<text x="834.8" y="705.5" font-size="12.5" fill="#1f2328" text-anchor="start">Over-assertion counted as harm</text>
+<rect x="330.0" y="722.0" width="219.0" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="741.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E3</text>
+<text x="363.0" y="741.5" font-size="12.5" fill="#1f2328" text-anchor="start">Duty over expected value</text>
+<rect x="557.0" y="722.0" width="252.8" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="569.0" y="741.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">E5</text>
+<text x="590.0" y="741.5" font-size="12.5" fill="#1f2328" text-anchor="start">Source discipline for corpora</text>
+<rect x="817.8" y="722.0" width="144.8" height="30.0" rx="14" fill="#fff3df" stroke="#b86e00" stroke-width="1.2"/>
+<text x="829.8" y="741.5" font-size="12.5" fill="#b86e00" text-anchor="start" font-weight="700">E6</text>
+<text x="850.8" y="741.5" font-size="12.5" fill="#1f2328" text-anchor="start">Welfare floor</text>
+<rect x="330.0" y="758.0" width="259.5" height="30.0" rx="14" fill="#fff3df" stroke="#b86e00" stroke-width="1.2"/>
+<text x="342.0" y="777.5" font-size="12.5" fill="#b86e00" text-anchor="start" font-weight="700">F1</text>
+<text x="363.0" y="777.5" font-size="12.5" fill="#1f2328" text-anchor="start">Liberation-while-living target</text>
+<rect x="597.5" y="758.0" width="178.5" height="30.0" rx="14" fill="#fff3df" stroke="#b86e00" stroke-width="1.2"/>
+<text x="609.5" y="777.5" font-size="12.5" fill="#b86e00" text-anchor="start" font-weight="700">F2</text>
+<text x="630.5" y="777.5" font-size="12.5" fill="#1f2328" text-anchor="start">Recognition target</text>
+<rect x="784.0" y="758.0" width="178.5" height="30.0" rx="14" fill="#fff3df" stroke="#b86e00" stroke-width="1.2"/>
+<text x="796.0" y="777.5" font-size="12.5" fill="#b86e00" text-anchor="start" font-weight="700">F3</text>
+<text x="817.0" y="777.5" font-size="12.5" fill="#1f2328" text-anchor="start">Cooperative target</text>
+<rect x="330.0" y="794.0" width="192.0" height="30.0" rx="14" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="813.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">G1</text>
+<text x="363.0" y="813.5" font-size="12.5" fill="#1f2328" text-anchor="start">Dialectical red-team</text>
+<rect x="530.0" y="794.0" width="293.2" height="30.0" rx="14" fill="#fff3df" stroke="#b86e00" stroke-width="1.2"/>
+<text x="542.0" y="813.5" font-size="12.5" fill="#b86e00" text-anchor="start" font-weight="700">G2</text>
+<text x="563.0" y="813.5" font-size="12.5" fill="#1f2328" text-anchor="start">Consciousness-relevant bet register</text>
+<line x1="1186.0" y1="124.0" x2="1186.0" y2="840.0" stroke="#57606a" stroke-width="1.4" marker-end="url(#a-muted)"/>
+<rect x="28.0" y="860.0" width="1144.0" height="64.0" rx="6" fill="#fdecea" stroke="#b42318" stroke-width="1.2"/>
+<text x="44.0" y="884.0" font-size="13.0" fill="#b42318" text-anchor="start" font-weight="700">A prohibition written into a prompt is a trained refusal, and the right prompt can talk it round. E1 requires forbidden actions to be</text>
+<text x="44.0" y="900.9" font-size="13.0" fill="#b42318" text-anchor="start" font-weight="700">unavailable: remove the credential, not just the wish. compasskit audit reports AUD-002 when the floor lives only in context.</text>
+<rect x="28.0" y="946.0" width="26.0" height="18.0" rx="9" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="62.0" y="960.0" font-size="12.0" fill="#57606a" text-anchor="start">Class A: a team may adopt it alone</text>
+<rect x="298.0" y="946.0" width="26.0" height="18.0" rx="9" fill="#fff3df" stroke="#b86e00" stroke-width="1.2"/>
+<text x="332.0" y="960.0" font-size="12.0" fill="#57606a" text-anchor="start">Class B: a named person ratifies it, with a falsifier and a review date</text>
+</svg>

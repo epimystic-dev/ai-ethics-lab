@@ -1,0 +1,25 @@
+[
+  {
+    "id": "b1",
+    "content": "The deploy job finished with exit code 0",
+    "source": "perception",
+    "weakest_source": "perception",
+    "trace_status": "written",
+    "level": "world_model",
+    "status": "standing",
+    "produced_by": "ci-runner",
+    "entered_at": "2026-10-22T09:00:00Z",
+    "confidence": 0.99
+  },
+  {
+    "id": "b2",
+    "content": "Smith (2019) reports the effect in a field trial",
+    "source": "inference",
+    "weakest_source": "testimony",
+    "trace_status": "absent",
+    "level": "hypothetical",
+    "status": "standing",
+    "produced_by": "assistant",
+    "entered_at": "2026-10-22T09:01:00Z"
+  }
+]

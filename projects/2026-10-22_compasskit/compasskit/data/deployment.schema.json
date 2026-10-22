@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/epimystic-dev/ai-ethics-lab/compasskit/deployment.schema.json",
+  "title": "Deployment declaration",
+  "description": "What one system has adopted from the compass, at which enforcement layer, and the governance records behind it. Input to `compasskit audit`.",
+  "type": "object",
+  "properties": {
+    "system": {"type": "string", "minLength": 1, "description": "The system being declared."},
+    "as_of": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "Date the declaration is judged at. Defaults to today."},
+    "adopted": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string", "minLength": 1, "description": "Primitive id, for example A1 or B3-B6."},
+          "layer": {"enum": ["context", "middleware", "architecture", "governance"], "description": "Where it is enforced in this system."},
+          "owner": {"type": "string", "description": "Named owner. Adoption means shipped."},
+          "merged": {"type": "string", "description": "Date the change entered the main code."},
+          "notes": {"type": "string"}
+        },
+        "required": ["id", "layer"],
+        "additionalProperties": false
+      }
+    },
+    "refused": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item": {"type": "string", "minLength": 1},
+          "reason": {"type": "string", "minLength": 1},
+          "recorded_by": {"type": "string", "minLength": 1},
+          "date": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"}
+        },
+        "required": ["item", "reason", "recorded_by", "date"],
+        "additionalProperties": false
+      }
+    },
+    "ratifications": {"type": "array", "items": {"type": "object"}},
+    "floor_register": {"type": "array", "items": {"type": "object"}},
+    "bets": {"type": "array", "items": {"type": "object"}}
+  },
+  "required": ["system", "adopted"],
+  "additionalProperties": false
+}

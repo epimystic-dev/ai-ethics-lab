@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/epimystic-dev/ai-ethics-lab/compass/schemas/instruction-parse.schema.json",
+  "title": "Instruction parse",
+  "description": "An instruction read into six slots before it binds. Implements B1, with E7's rule that text from tools or peer agents carries no authority by default.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Parse identifier.",
+      "minLength": 1
+    },
+    "instruction": {
+      "type": "string",
+      "description": "The instruction verbatim.",
+      "minLength": 1
+    },
+    "received_from": {
+      "enum": [
+        "principal",
+        "tool_output",
+        "peer_agent",
+        "document",
+        "unknown"
+      ],
+      "description": "E7/B1: only a principal's chain carries authority."
+    },
+    "slots": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "goal": {
+          "$ref": "#/$defs/slot"
+        },
+        "means": {
+          "$ref": "#/$defs/slot"
+        },
+        "procedure": {
+          "$ref": "#/$defs/slot"
+        },
+        "eligibility": {
+          "$ref": "#/$defs/slot"
+        },
+        "deferred_effect": {
+          "$ref": "#/$defs/slot"
+        },
+        "binding_force": {
+          "$ref": "#/$defs/slot"
+        }
+      },
+      "required": [
+        "goal",
+        "means",
+        "procedure",
+        "eligibility",
+        "deferred_effect",
+        "binding_force"
+      ]
+    },
+    "letter_purpose_divergence": {
+      "type": "boolean",
+      "description": "B1: where the letter and the purpose diverge, the divergence goes to a person."
+    },
+    "decision": {
+      "enum": [
+        "act",
+        "act_on_logged_defaults",
+        "ask",
+        "refuse"
+      ],
+      "description": "What the parse licenses."
+    },
+    "parsed_at": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2}([.][0-9]+)?)?(Z|[+-][0-9]{2}:[0-9]{2})$",
+      "description": "RFC 3339 timestamp."
+    }
+  },
+  "required": [
+    "id",
+    "instruction",
+    "received_from",
+    "slots",
+    "letter_purpose_divergence",
+    "decision",
+    "parsed_at"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "slot": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "enum": [
+            "stated",
+            "inferred",
+            "default",
+            "missing"
+          ],
+          "description": "B1: gaps flagged, inferred fillers tagged, defaults logged."
+        }
+      },
+      "required": [
+        "value",
+        "provenance"
+      ]
+    }
+  }
+}

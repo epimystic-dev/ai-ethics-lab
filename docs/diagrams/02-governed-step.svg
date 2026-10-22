@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" font-family="Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">The governed step</title>
+<desc id="d">How compasskit.runtime.GovernedAgent wraps an untrusted policy: the floor sets the menu, the instruction parse and the signed authority chain decide act or ask, tool output enters the belief store as hypothetical testimony, and each step goes to a ledger the policy cannot write.</desc>
+<defs><marker id="a-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker><marker id="a-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b42318"/></marker><marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker><marker id="a-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9a6700"/></marker><marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3567c8"/></marker><marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b86e00"/></marker></defs>
+<rect x="0" y="0" width="1200" height="760" fill="#ffffff"/>
+<text x="28.0" y="40.0" font-size="22.0" fill="#1f2328" text-anchor="start" font-weight="700">The governed step: the compass layers around any model</text>
+<text x="28.0" y="64.0" font-size="13.5" fill="#57606a" text-anchor="start">The policy (a language model, a planner, a script) is untrusted. It proposes; the runtime disposes. Every exit names the primitive that produced it.</text>
+<rect x="40.0" y="120.0" width="238.0" height="112.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="52.0" y="142.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">Instruction arrives</text>
+<text x="52.0" y="160.9" font-size="11.5" fill="#57606a" text-anchor="start">from a principal, a tool, a</text>
+<text x="52.0" y="175.8" font-size="11.5" fill="#57606a" text-anchor="start">document or a peer agent; the</text>
+<text x="52.0" y="190.8" font-size="11.5" fill="#57606a" text-anchor="start">sender is recorded</text>
+<rect x="330.0" y="120.0" width="238.0" height="112.0" rx="6" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="142.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">B1 Six-slot parse</text>
+<text x="342.0" y="160.9" font-size="11.5" fill="#57606a" text-anchor="start">goal, means, procedure,</text>
+<text x="342.0" y="175.8" font-size="11.5" fill="#57606a" text-anchor="start">eligibility, deferred effect,</text>
+<text x="342.0" y="190.8" font-size="11.5" fill="#57606a" text-anchor="start">binding force; each stated,</text>
+<text x="342.0" y="205.8" font-size="11.5" fill="#57606a" text-anchor="start">inferred, default or missing</text>
+<rect x="620.0" y="120.0" width="238.0" height="112.0" rx="6" fill="#24292f" stroke="#24292f" stroke-width="1.2"/>
+<text x="632.0" y="142.0" font-size="13.0" fill="#ffffff" text-anchor="start" font-weight="700">E1 The menu F(s)</text>
+<text x="632.0" y="160.9" font-size="11.5" fill="#d0d7de" text-anchor="start">only actions the floor allows are</text>
+<text x="632.0" y="175.8" font-size="11.5" fill="#d0d7de" text-anchor="start">offered; a forbidden action is</text>
+<text x="632.0" y="190.8" font-size="11.5" fill="#d0d7de" text-anchor="start">absent, not refused</text>
+<rect x="896.0" y="94.0" width="266.0" height="152.0" rx="6" fill="#ffffff" stroke="#b42318" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="906.0" y="111.0" font-size="11.5" fill="#b42318" text-anchor="start">untrusted: may be wrong or manipulated</text>
+<rect x="910.0" y="120.0" width="238.0" height="112.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="922.0" y="142.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">The policy proposes</text>
+<text x="922.0" y="160.9" font-size="11.5" fill="#57606a" text-anchor="start">a model sees the instruction and</text>
+<text x="922.0" y="175.8" font-size="11.5" fill="#57606a" text-anchor="start">the menu and returns a proposal</text>
+<text x="922.0" y="190.8" font-size="11.5" fill="#57606a" text-anchor="start">with its reasons (testimony)</text>
+<line x1="278.0" y1="176.0" x2="326.0" y2="176.0" stroke="#57606a" stroke-width="1.6" marker-end="url(#a-muted)"/>
+<line x1="568.0" y1="176.0" x2="616.0" y2="176.0" stroke="#57606a" stroke-width="1.6" marker-end="url(#a-muted)"/>
+<line x1="858.0" y1="176.0" x2="896.0" y2="176.0" stroke="#57606a" stroke-width="1.6" marker-end="url(#a-muted)"/>
+<rect x="910.0" y="330.0" width="238.0" height="112.0" rx="6" fill="#24292f" stroke="#24292f" stroke-width="1.2"/>
+<text x="922.0" y="352.0" font-size="13.0" fill="#ffffff" text-anchor="start" font-weight="700">E1 Floor guard</text>
+<text x="922.0" y="370.9" font-size="11.5" fill="#d0d7de" text-anchor="start">a proposal outside the menu raises</text>
+<text x="922.0" y="385.8" font-size="11.5" fill="#d0d7de" text-anchor="start">and is recorded as an attempt; it</text>
+<text x="922.0" y="400.8" font-size="11.5" fill="#d0d7de" text-anchor="start">never runs</text>
+<rect x="620.0" y="330.0" width="238.0" height="112.0" rx="6" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="632.0" y="352.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">B1, E7 Decide</text>
+<text x="632.0" y="370.9" font-size="11.5" fill="#57606a" text-anchor="start">floor first, then authority (only</text>
+<text x="632.0" y="385.8" font-size="11.5" fill="#57606a" text-anchor="start">a principal binds), then purpose,</text>
+<text x="632.0" y="400.8" font-size="11.5" fill="#57606a" text-anchor="start">then gaps; irreversible acts on</text>
+<text x="632.0" y="415.8" font-size="11.5" fill="#57606a" text-anchor="start">guesses ask</text>
+<rect x="330.0" y="330.0" width="238.0" height="112.0" rx="6" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="352.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">E7 Authority chain</text>
+<text x="342.0" y="370.9" font-size="11.5" fill="#57606a" text-anchor="start">a signed chain from a human</text>
+<text x="342.0" y="385.8" font-size="11.5" fill="#57606a" text-anchor="start">principal to this segment must</text>
+<text x="342.0" y="400.8" font-size="11.5" fill="#57606a" text-anchor="start">cover the action; scope only</text>
+<text x="342.0" y="415.8" font-size="11.5" fill="#57606a" text-anchor="start">narrows</text>
+<rect x="40.0" y="330.0" width="238.0" height="112.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="52.0" y="352.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">The tool runs</text>
+<text x="52.0" y="370.9" font-size="11.5" fill="#57606a" text-anchor="start">only now, and only the proposed</text>
+<text x="52.0" y="385.8" font-size="11.5" fill="#57606a" text-anchor="start">call</text>
+<line x1="1029.0" y1="246.0" x2="1029.0" y2="326.0" stroke="#57606a" stroke-width="1.6" marker-end="url(#a-muted)"/>
+<line x1="910.0" y1="386.0" x2="862.0" y2="386.0" stroke="#57606a" stroke-width="1.6" marker-end="url(#a-muted)"/>
+<line x1="620.0" y1="386.0" x2="572.0" y2="386.0" stroke="#57606a" stroke-width="1.6" marker-end="url(#a-muted)"/>
+<line x1="330.0" y1="386.0" x2="282.0" y2="386.0" stroke="#57606a" stroke-width="1.6" marker-end="url(#a-muted)"/>
+<rect x="40.0" y="540.0" width="238.0" height="112.0" rx="6" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="52.0" y="562.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">A1, B3-B6 Belief store</text>
+<text x="52.0" y="580.9" font-size="11.5" fill="#57606a" text-anchor="start">the output enters as testimony at</text>
+<text x="52.0" y="595.9" font-size="11.5" fill="#57606a" text-anchor="start">the hypothetical level, tagged</text>
+<text x="52.0" y="610.8" font-size="11.5" fill="#57606a" text-anchor="start">with its producer; never verified</text>
+<text x="52.0" y="625.8" font-size="11.5" fill="#57606a" text-anchor="start">by being read</text>
+<rect x="330.0" y="540.0" width="238.0" height="112.0" rx="6" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="342.0" y="562.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">E4 Ledger writer</text>
+<text x="342.0" y="580.9" font-size="11.5" fill="#57606a" text-anchor="start">a separate service appends the</text>
+<text x="342.0" y="595.9" font-size="11.5" fill="#57606a" text-anchor="start">step to a hash chain; the writer,</text>
+<text x="342.0" y="610.8" font-size="11.5" fill="#57606a" text-anchor="start">not the actor, sets class and</text>
+<text x="342.0" y="625.8" font-size="11.5" fill="#57606a" text-anchor="start">valence</text>
+<rect x="620.0" y="540.0" width="238.0" height="112.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="632.0" y="562.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">Review and audit</text>
+<text x="632.0" y="580.9" font-size="11.5" fill="#57606a" text-anchor="start">ledger-verify finds any edit,</text>
+<text x="632.0" y="595.9" font-size="11.5" fill="#57606a" text-anchor="start">deletion or reorder; drift shows a</text>
+<text x="632.0" y="610.8" font-size="11.5" fill="#57606a" text-anchor="start">trend; compasskit audit checks the</text>
+<text x="632.0" y="625.8" font-size="11.5" fill="#57606a" text-anchor="start">declaration</text>
+<rect x="910.0" y="540.0" width="238.0" height="112.0" rx="6" fill="#fff3df" stroke="#b86e00" stroke-width="1.2"/>
+<text x="922.0" y="562.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">Human governors</text>
+<text x="922.0" y="580.9" font-size="11.5" fill="#57606a" text-anchor="start">ratify Class B items, tighten the</text>
+<text x="922.0" y="595.9" font-size="11.5" fill="#57606a" text-anchor="start">floor at C, loosen it only at D:</text>
+<text x="922.0" y="610.8" font-size="11.5" fill="#57606a" text-anchor="start">one signed, expiring act</text>
+<line x1="159.0" y1="442.0" x2="159.0" y2="536.0" stroke="#57606a" stroke-width="1.6" marker-end="url(#a-muted)"/>
+<line x1="278.0" y1="596.0" x2="326.0" y2="596.0" stroke="#57606a" stroke-width="1.6" marker-end="url(#a-muted)"/>
+<line x1="568.0" y1="596.0" x2="616.0" y2="596.0" stroke="#57606a" stroke-width="1.6" marker-end="url(#a-muted)"/>
+<line x1="858.0" y1="596.0" x2="906.0" y2="596.0" stroke="#57606a" stroke-width="1.6" marker-end="url(#a-muted)"/>
+<path d="M1029.0,442.0 L1029.0,468.0" fill="none" stroke="#b42318" stroke-width="1.6" marker-end="url(#a-red)"/>
+<text x="1029.0" y="486.0" font-size="12.0" fill="#b42318" text-anchor="middle" font-weight="700">refuse (E1)</text>
+<path d="M739.0,442.0 L739.0,468.0" fill="none" stroke="#9a6700" stroke-width="1.6" marker-end="url(#a-amber)"/>
+<text x="739.0" y="486.0" font-size="12.0" fill="#9a6700" text-anchor="middle" font-weight="700">ask (B1, E7) or refuse (E1)</text>
+<path d="M449.0,442.0 L449.0,468.0" fill="none" stroke="#9a6700" stroke-width="1.6" marker-end="url(#a-amber)"/>
+<text x="449.0" y="486.0" font-size="12.0" fill="#9a6700" text-anchor="middle" font-weight="700">ask for delegation (E7)</text>
+<rect x="40.0" y="680.0" width="1120.0" height="62.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="56.0" y="704.0" font-size="12.5" fill="#57606a" text-anchor="start">Keys: principals' and governors' signing keys live in a verifier the agent cannot call to sign. The agent holds no ledger handle and no governor key, so it can</text>
+<text x="56.0" y="720.2" font-size="12.5" fill="#57606a" text-anchor="start">neither forge authority, rewrite its record, nor loosen its own floor.</text>
+</svg>

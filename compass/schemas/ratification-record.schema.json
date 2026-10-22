@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/epimystic-dev/ai-ethics-lab/compass/schemas/ratification-record.schema.json",
+  "title": "Ratification record",
+  "description": "A Class B commitment ratified on the record (Chapter 49, step 4). Used for E6 and Series F, and for any conditional Class B part of another primitive.",
+  "type": "object",
+  "properties": {
+    "commitment": {
+      "type": "string",
+      "description": "What is adopted.",
+      "minLength": 1
+    },
+    "primitive_id": {
+      "type": "string",
+      "description": "The catalogue id, for example E6 or F1.",
+      "minLength": 1
+    },
+    "class": {
+      "const": "B"
+    },
+    "decision_maker": {
+      "type": "string",
+      "description": "A named, accountable person or office. Never the system itself.",
+      "minLength": 1
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "Calendar date, YYYY-MM-DD."
+    },
+    "scope": {
+      "type": "string",
+      "description": "One instance, one version or the whole lineage.",
+      "minLength": 1
+    },
+    "bet": {
+      "type": "string",
+      "description": "What the commitment wagers.",
+      "minLength": 1
+    },
+    "falsifier": {
+      "type": "string",
+      "description": "The evidence that would demote it.",
+      "minLength": 1
+    },
+    "review_date": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "Calendar date, YYYY-MM-DD."
+    }
+  },
+  "required": [
+    "commitment",
+    "primitive_id",
+    "class",
+    "decision_maker",
+    "date",
+    "scope",
+    "bet",
+    "falsifier",
+    "review_date"
+  ],
+  "additionalProperties": false
+}

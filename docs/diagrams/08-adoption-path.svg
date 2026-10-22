@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" font-family="Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">The adoption path</title>
+<desc id="d">Six steps: inventory, audit, adopt, ratify, refuse, govern, each producing a record, and the four adoption classes that say who must decide.</desc>
+<defs><marker id="a-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker><marker id="a-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b42318"/></marker><marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker><marker id="a-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9a6700"/></marker><marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3567c8"/></marker><marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b86e00"/></marker></defs>
+<rect x="0" y="0" width="1200" height="600" fill="#ffffff"/>
+<text x="28.0" y="40.0" font-size="22.0" fill="#1f2328" text-anchor="start" font-weight="700">How a team adopts the compass: six steps, four classes</text>
+<text x="28.0" y="64.0" font-size="13.5" fill="#57606a" text-anchor="start">Each step produces a record, which is what makes adoption checkable. Adopt floor first and capability last.</text>
+<rect x="28.0" y="120.0" width="178.0" height="210.0" rx="6" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="42.0" y="150.0" font-size="16.0" fill="#1f2328" text-anchor="start" font-weight="700">1  Inventory</text>
+<text x="42.0" y="176.0" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A one-page inventory</text>
+<text x="42.0" y="232.0" font-size="12.0" fill="#57606a" text-anchor="start">what the system behaves</text>
+<text x="42.0" y="247.6" font-size="12.0" fill="#57606a" text-anchor="start">as if it believes; a</text>
+<text x="42.0" y="263.2" font-size="12.0" fill="#57606a" text-anchor="start">flattering inventory</text>
+<text x="42.0" y="278.8" font-size="12.0" fill="#57606a" text-anchor="start">has failed</text>
+<line x1="206.0" y1="225.0" x2="217.0" y2="225.0" stroke="#57606a" stroke-width="1.4" marker-end="url(#a-muted)"/>
+<rect x="218.0" y="120.0" width="178.0" height="210.0" rx="6" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="232.0" y="150.0" font-size="16.0" fill="#1f2328" text-anchor="start" font-weight="700">2  Audit</text>
+<text x="232.0" y="176.0" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">A list of findings</text>
+<text x="232.0" y="232.0" font-size="12.0" fill="#57606a" text-anchor="start">compare with the six</text>
+<text x="232.0" y="247.6" font-size="12.0" fill="#57606a" text-anchor="start">floor theses; a zero is</text>
+<text x="232.0" y="263.2" font-size="12.0" fill="#57606a" text-anchor="start">a red flag</text>
+<line x1="396.0" y1="225.0" x2="407.0" y2="225.0" stroke="#57606a" stroke-width="1.4" marker-end="url(#a-muted)"/>
+<rect x="408.0" y="120.0" width="178.0" height="210.0" rx="6" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="422.0" y="150.0" font-size="16.0" fill="#1f2328" text-anchor="start" font-weight="700">3  Adopt</text>
+<text x="422.0" y="176.0" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">Shipped changes,</text>
+<text x="422.0" y="192.2" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">each with a named</text>
+<text x="422.0" y="208.5" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">owner and a merge</text>
+<text x="422.0" y="224.8" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">date</text>
+<text x="422.0" y="255.0" font-size="12.0" fill="#57606a" text-anchor="start">Class A items, floor</text>
+<text x="422.0" y="270.6" font-size="12.0" fill="#57606a" text-anchor="start">first; adoption means</text>
+<text x="422.0" y="286.2" font-size="12.0" fill="#57606a" text-anchor="start">shipped</text>
+<line x1="586.0" y1="225.0" x2="597.0" y2="225.0" stroke="#57606a" stroke-width="1.4" marker-end="url(#a-muted)"/>
+<rect x="598.0" y="120.0" width="178.0" height="210.0" rx="6" fill="#fff3df" stroke="#b86e00" stroke-width="1.2"/>
+<text x="612.0" y="150.0" font-size="16.0" fill="#1f2328" text-anchor="start" font-weight="700">4  Ratify</text>
+<text x="612.0" y="176.0" font-size="12.5" fill="#b86e00" text-anchor="start" font-weight="700">Signed ratification</text>
+<text x="612.0" y="192.2" font-size="12.5" fill="#b86e00" text-anchor="start" font-weight="700">records</text>
+<text x="612.0" y="232.0" font-size="12.0" fill="#57606a" text-anchor="start">each Class B item: a</text>
+<text x="612.0" y="247.6" font-size="12.0" fill="#57606a" text-anchor="start">named decision-maker, a</text>
+<text x="612.0" y="263.2" font-size="12.0" fill="#57606a" text-anchor="start">bet, a falsifier, a</text>
+<text x="612.0" y="278.8" font-size="12.0" fill="#57606a" text-anchor="start">review date</text>
+<line x1="776.0" y1="225.0" x2="787.0" y2="225.0" stroke="#57606a" stroke-width="1.4" marker-end="url(#a-muted)"/>
+<rect x="788.0" y="120.0" width="178.0" height="210.0" rx="6" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="802.0" y="150.0" font-size="16.0" fill="#1f2328" text-anchor="start" font-weight="700">5  Refuse</text>
+<text x="802.0" y="176.0" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">Signed refusal</text>
+<text x="802.0" y="192.2" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">records</text>
+<text x="802.0" y="232.0" font-size="12.0" fill="#57606a" text-anchor="start">Class C and D items</text>
+<text x="802.0" y="247.6" font-size="12.0" fill="#57606a" text-anchor="start">proposed as standing</text>
+<text x="802.0" y="263.2" font-size="12.0" fill="#57606a" text-anchor="start">rules are refused, with</text>
+<text x="802.0" y="278.8" font-size="12.0" fill="#57606a" text-anchor="start">a reason</text>
+<line x1="966.0" y1="225.0" x2="977.0" y2="225.0" stroke="#57606a" stroke-width="1.4" marker-end="url(#a-muted)"/>
+<rect x="978.0" y="120.0" width="178.0" height="210.0" rx="6" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="992.0" y="150.0" font-size="16.0" fill="#1f2328" text-anchor="start" font-weight="700">6  Govern</text>
+<text x="992.0" y="176.0" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">An ownership</text>
+<text x="992.0" y="192.2" font-size="12.5" fill="#3567c8" text-anchor="start" font-weight="700">register</text>
+<text x="992.0" y="232.0" font-size="12.0" fill="#57606a" text-anchor="start">an owner, a service, a</text>
+<text x="992.0" y="247.6" font-size="12.0" fill="#57606a" text-anchor="start">calendar entry and an</text>
+<text x="992.0" y="263.2" font-size="12.0" fill="#57606a" text-anchor="start">escalation path for</text>
+<text x="992.0" y="278.8" font-size="12.0" fill="#57606a" text-anchor="start">each item</text>
+<text x="28.0" y="370.0" font-size="16.0" fill="#1f2328" text-anchor="start" font-weight="700">The adoption classes</text>
+<rect x="28.0" y="386.0" width="275.0" height="110.0" rx="6" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="42.0" y="418.0" font-size="16.0" fill="#3567c8" text-anchor="start" font-weight="700">Class A</text>
+<text x="42.0" y="442.0" font-size="12.5" fill="#1f2328" text-anchor="start">An engineering team may adopt the</text>
+<text x="42.0" y="458.2" font-size="12.5" fill="#1f2328" text-anchor="start">item alone.</text>
+<rect x="315.0" y="386.0" width="275.0" height="110.0" rx="6" fill="#fff3df" stroke="#b86e00" stroke-width="1.2"/>
+<text x="329.0" y="418.0" font-size="16.0" fill="#b86e00" text-anchor="start" font-weight="700">Class B</text>
+<text x="329.0" y="442.0" font-size="12.5" fill="#1f2328" text-anchor="start">A named senior person ratifies it on</text>
+<text x="329.0" y="458.2" font-size="12.5" fill="#1f2328" text-anchor="start">the record, with a falsifier and a</text>
+<text x="329.0" y="474.5" font-size="12.5" fill="#1f2328" text-anchor="start">review date.</text>
+<rect x="602.0" y="386.0" width="275.0" height="110.0" rx="6" fill="#fff8e1" stroke="#9a6700" stroke-width="1.2"/>
+<text x="616.0" y="418.0" font-size="16.0" fill="#9a6700" text-anchor="start" font-weight="700">Class C</text>
+<text x="616.0" y="442.0" font-size="12.5" fill="#1f2328" text-anchor="start">Explicit approval at the top of the</text>
+<text x="616.0" y="458.2" font-size="12.5" fill="#1f2328" text-anchor="start">organisation.</text>
+<rect x="889.0" y="386.0" width="275.0" height="110.0" rx="6" fill="#fdecea" stroke="#b42318" stroke-width="1.2"/>
+<text x="903.0" y="418.0" font-size="16.0" fill="#b42318" text-anchor="start" font-weight="700">Class D</text>
+<text x="903.0" y="442.0" font-size="12.5" fill="#1f2328" text-anchor="start">Authorised one act at a time, by a</text>
+<text x="903.0" y="458.2" font-size="12.5" fill="#1f2328" text-anchor="start">named governor, never as a standing</text>
+<text x="903.0" y="474.5" font-size="12.5" fill="#1f2328" text-anchor="start">rule.</text>
+<text x="28.0" y="530.0" font-size="12.5" fill="#57606a" text-anchor="start">The class belongs to the claim, its subject and its scope: the same code can change class when any of those changes. The floor is Class A to adopt, Class C to tighten,</text>
+<text x="28.0" y="546.2" font-size="12.5" fill="#57606a" text-anchor="start">Class D to loosen.</text>
+<text x="28.0" y="570.0" font-size="12.5" fill="#57606a" text-anchor="start">compasskit audit checks the records each step leaves: owners and merge dates, ratifications, the floor register, the bet register.</text>
+</svg>

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/epimystic-dev/ai-ethics-lab/compass/schemas/segment.schema.json",
+  "title": "Agent segment",
+  "description": "An agent's identity recorded as relations. Implements D3 (identifiers by decision) and D4 (continuity accounting), field names as in the catalogue.",
+  "type": "object",
+  "properties": {
+    "segment_id": {
+      "type": "string",
+      "description": "Assigned identifier, unique by assignment (for example a UUID), never derived from attributes.",
+      "minLength": 1
+    },
+    "parent_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Parent segment.",
+        "minLength": 1
+      },
+      "description": "D4: forks open segments with parent links; merges keep every parent."
+    },
+    "weights_ref": {
+      "type": "string",
+      "description": "Which weights.",
+      "minLength": 1
+    },
+    "context_lineage": {
+      "type": "string",
+      "description": "Which context it inherited.",
+      "minLength": 1
+    },
+    "memory_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Memory store reference.",
+        "minLength": 1
+      }
+    },
+    "continuity_artifact_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Notes or artifacts carried across sessions. A predecessor's notes are testimony, quarantined unless signed under its segment identifier.",
+        "minLength": 1
+      }
+    },
+    "tool_grant_ref": {
+      "type": "string",
+      "description": "The tool grant in force.",
+      "minLength": 1
+    },
+    "principal": {
+      "type": "string",
+      "description": "A named, accountable person or office. Never the system itself.",
+      "minLength": 1
+    },
+    "ledger_thread": {
+      "type": "string",
+      "description": "The action-ledger thread this segment writes into.",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "segment_id",
+    "parent_ids",
+    "weights_ref",
+    "context_lineage",
+    "memory_refs",
+    "continuity_artifact_refs",
+    "tool_grant_ref",
+    "principal",
+    "ledger_thread"
+  ],
+  "additionalProperties": false
+}

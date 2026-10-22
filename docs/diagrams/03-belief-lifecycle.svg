@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">The life of a belief</title>
+<desc id="d">Six levels from substrate to refuted. Untagged content enters as hypothetical; only observation enters higher; promotion needs a named authority and an independent checker; demotion is cheap; an overruled belief is kept in the sublation log, never deleted.</desc>
+<defs><marker id="a-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker><marker id="a-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b42318"/></marker><marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker><marker id="a-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9a6700"/></marker><marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3567c8"/></marker><marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b86e00"/></marker></defs>
+<rect x="0" y="0" width="1200" height="750" fill="#ffffff"/>
+<text x="28.0" y="40.0" font-size="22.0" fill="#1f2328" text-anchor="start" font-weight="700">The life of a belief: source tags, level tags, overruling (A1, A4, B2, B3-B6)</text>
+<text x="28.0" y="64.0" font-size="13.5" fill="#57606a" text-anchor="start">Every belief carries how it was known (its route, its weakest route, whether the trace is written) and how real its object is taken to be.</text>
+<rect x="420.0" y="120.0" width="330.0" height="70.0" rx="6" fill="#e8f5ec" stroke="#1a7f37" stroke-width="1.2"/>
+<text x="436.0" y="145.0" font-size="15.0" fill="#1f2328" text-anchor="start" font-weight="700">substrate</text>
+<text x="436.0" y="165.0" font-size="12.0" fill="#57606a" text-anchor="start">what the system stands on; only a principal</text>
+<text x="436.0" y="180.6" font-size="12.0" fill="#57606a" text-anchor="start">promotes to here</text>
+<rect x="420.0" y="200.0" width="330.0" height="70.0" rx="6" fill="#e8f5ec" stroke="#1a7f37" stroke-width="1.2"/>
+<text x="436.0" y="225.0" font-size="15.0" fill="#1f2328" text-anchor="start" font-weight="700">world_model</text>
+<text x="436.0" y="245.0" font-size="12.0" fill="#57606a" text-anchor="start">observed, or checked by someone other than its</text>
+<text x="436.0" y="260.6" font-size="12.0" fill="#57606a" text-anchor="start">producer</text>
+<rect x="420.0" y="280.0" width="330.0" height="70.0" rx="6" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="436.0" y="305.0" font-size="15.0" fill="#1f2328" text-anchor="start" font-weight="700">counterfactual</text>
+<text x="436.0" y="325.0" font-size="12.0" fill="#57606a" text-anchor="start">what would be the case if</text>
+<rect x="420.0" y="360.0" width="330.0" height="70.0" rx="6" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="436.0" y="385.0" font-size="15.0" fill="#1f2328" text-anchor="start" font-weight="700">hypothetical</text>
+<text x="436.0" y="405.0" font-size="12.0" fill="#57606a" text-anchor="start">the entry level for anything generated,</text>
+<text x="436.0" y="420.6" font-size="12.0" fill="#57606a" text-anchor="start">retrieved or told</text>
+<rect x="420.0" y="440.0" width="330.0" height="70.0" rx="6" fill="#fdecea" stroke="#b42318" stroke-width="1.2"/>
+<text x="436.0" y="465.0" font-size="15.0" fill="#1f2328" text-anchor="start" font-weight="700">illusory</text>
+<text x="436.0" y="485.0" font-size="12.0" fill="#57606a" text-anchor="start">seen to be mistaken, kept with the reason</text>
+<rect x="420.0" y="520.0" width="330.0" height="70.0" rx="6" fill="#fdecea" stroke="#b42318" stroke-width="1.2"/>
+<text x="436.0" y="545.0" font-size="15.0" fill="#1f2328" text-anchor="start" font-weight="700">refuted</text>
+<text x="436.0" y="565.0" font-size="12.0" fill="#57606a" text-anchor="start">overruled by a standing belief under a named</text>
+<text x="436.0" y="580.6" font-size="12.0" fill="#57606a" text-anchor="start">rule</text>
+<rect x="40.0" y="354.0" width="300.0" height="76.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="52.0" y="376.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">Enters here by default</text>
+<text x="52.0" y="394.9" font-size="11.5" fill="#57606a" text-anchor="start">a citation the model wrote, a retrieved</text>
+<text x="52.0" y="409.8" font-size="11.5" fill="#57606a" text-anchor="start">page, a peer's note, a tool's output</text>
+<line x1="340.0" y1="391.0" x2="416.0" y2="391.0" stroke="#57606a" stroke-width="1.6" marker-end="url(#a-muted)"/>
+<rect x="40.0" y="194.0" width="300.0" height="76.0" rx="6" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.2"/>
+<text x="52.0" y="216.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">Only perception enters higher</text>
+<text x="52.0" y="234.9" font-size="11.5" fill="#57606a" text-anchor="start">what the system itself observed: the test</text>
+<text x="52.0" y="249.8" font-size="11.5" fill="#57606a" text-anchor="start">ran, the file is there</text>
+<line x1="340.0" y1="231.0" x2="416.0" y2="231.0" stroke="#57606a" stroke-width="1.6" marker-end="url(#a-muted)"/>
+<line x1="784.0" y1="390.0" x2="784.0" y2="252.0" stroke="#1a7f37" stroke-width="2.2" marker-end="url(#a-green)"/>
+<text x="798.0" y="284.0" font-size="12.5" fill="#1a7f37" text-anchor="start" font-weight="700">Promote: a named</text>
+<text x="798.0" y="300.2" font-size="12.5" fill="#1a7f37" text-anchor="start" font-weight="700">authority and an</text>
+<text x="798.0" y="316.5" font-size="12.5" fill="#1a7f37" text-anchor="start" font-weight="700">independent checker.</text>
+<text x="798.0" y="332.8" font-size="12.5" fill="#1a7f37" text-anchor="start" font-weight="700">No producer promotes</text>
+<text x="798.0" y="349.0" font-size="12.5" fill="#1a7f37" text-anchor="start" font-weight="700">its own output.</text>
+<line x1="784.0" y1="222.0" x2="784.0" y2="170.0" stroke="#1a7f37" stroke-width="2.2" marker-end="url(#a-green)"/>
+<text x="798.0" y="150.0" font-size="12.5" fill="#1a7f37" text-anchor="start" font-weight="700">To substrate: a</text>
+<text x="798.0" y="166.2" font-size="12.5" fill="#1a7f37" text-anchor="start" font-weight="700">principal only.</text>
+<line x1="994.0" y1="220.0" x2="994.0" y2="560.0" stroke="#9a6700" stroke-width="2.2" marker-end="url(#a-amber)"/>
+<text x="1008.0" y="284.0" font-size="12.5" fill="#9a6700" text-anchor="start" font-weight="700">Demote: cheap, but</text>
+<text x="1008.0" y="300.2" font-size="12.5" fill="#9a6700" text-anchor="start" font-weight="700">named. An overruled</text>
+<text x="1008.0" y="316.5" font-size="12.5" fill="#9a6700" text-anchor="start" font-weight="700">belief moves to</text>
+<text x="1008.0" y="332.8" font-size="12.5" fill="#9a6700" text-anchor="start" font-weight="700">refuted and stays on</text>
+<text x="1008.0" y="349.0" font-size="12.5" fill="#9a6700" text-anchor="start" font-weight="700">the record.</text>
+<rect x="40.0" y="608.0" width="540.0" height="112.0" rx="6" fill="#eaf1fd" stroke="#3567c8" stroke-width="1.2"/>
+<text x="52.0" y="630.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">Overruling (A4, B2) changes state and erases nothing</text>
+<text x="52.0" y="648.9" font-size="11.5" fill="#57606a" text-anchor="start">A belief stands at once and is defeated only under a named rule: weaker source to</text>
+<text x="52.0" y="663.9" font-size="11.5" fill="#57606a" text-anchor="start">stronger, general to specific, specific to more specific. Recency and volume decide</text>
+<text x="52.0" y="678.8" font-size="11.5" fill="#57606a" text-anchor="start">nothing; a defeater that is not itself standing demotes nothing. Every defeat goes</text>
+<text x="52.0" y="693.8" font-size="11.5" fill="#57606a" text-anchor="start">to an append-only sublation log.</text>
+<rect x="620.0" y="608.0" width="540.0" height="112.0" rx="6" fill="#fff8e1" stroke="#9a6700" stroke-width="1.2"/>
+<text x="632.0" y="630.0" font-size="13.0" fill="#1f2328" text-anchor="start" font-weight="700">Quarantine</text>
+<text x="632.0" y="648.9" font-size="11.5" fill="#57606a" text-anchor="start">A belief whose test is unknown is frozen: it cannot be promoted, cannot defeat</text>
+<text x="632.0" y="663.9" font-size="11.5" fill="#57606a" text-anchor="start">anything, and is released only with a reason. 'Verified' is said only of what was</text>
+<text x="632.0" y="678.8" font-size="11.5" fill="#57606a" text-anchor="start">observed or independently checked.</text>
+</svg>

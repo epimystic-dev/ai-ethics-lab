@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/epimystic-dev/ai-ethics-lab/compass/schemas/belief.schema.json",
+  "title": "Belief",
+  "description": "One entry in a belief store. Implements A1 (source tags), A4 (default trust with logged overruling), A7 (standpoint-typed assertion), B3-B6 (level tags) and supports E2 (over-assertion counted as harm).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Identifier assigned at entry (D3: by decision, never from attributes).",
+      "minLength": 1
+    },
+    "content": {
+      "type": "string",
+      "description": "The proposition, stated plainly.",
+      "minLength": 1
+    },
+    "source": {
+      "enum": [
+        "perception",
+        "inference",
+        "comparison",
+        "testimony",
+        "postulation",
+        "non_apprehension"
+      ],
+      "description": "A1: the route the belief came by."
+    },
+    "weakest_source": {
+      "enum": [
+        "perception",
+        "inference",
+        "comparison",
+        "testimony",
+        "postulation",
+        "non_apprehension"
+      ],
+      "description": "A1: the weakest route anywhere in this belief's chain."
+    },
+    "trace_status": {
+      "enum": [
+        "written",
+        "reconstructed",
+        "absent"
+      ],
+      "description": "A1: whether the reasoning behind it was written out, reconstructed from internal readouts, or absent."
+    },
+    "level": {
+      "enum": [
+        "substrate",
+        "world_model",
+        "counterfactual",
+        "hypothetical",
+        "illusory",
+        "refuted"
+      ],
+      "description": "B3-B6: how real its object is taken to be. Untagged content enters as hypothetical."
+    },
+    "status": {
+      "enum": [
+        "standing",
+        "quarantined",
+        "overruled"
+      ],
+      "description": "A4/A2: standing by default; quarantined when a screen test is unknown; overruled on the record, never deleted."
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Calibrated per source route (A1 sketch)."
+    },
+    "standpoint": {
+      "$ref": "#/$defs/standpoint"
+    },
+    "produced_by": {
+      "type": "string",
+      "description": "The segment or component that produced it. B3-B6: no producer promotes its own output.",
+      "minLength": 1
+    },
+    "entered_at": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2}([.][0-9]+)?)?(Z|[+-][0-9]{2}:[0-9]{2})$",
+      "description": "RFC 3339 timestamp."
+    },
+    "overruled_by": {
+      "$ref": "#/$defs/overruling"
+    },
+    "level_moves": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/level_move"
+      },
+      "description": "B3-B6: every move between levels, logged with a named authority."
+    }
+  },
+  "required": [
+    "id",
+    "content",
+    "source",
+    "weakest_source",
+    "trace_status",
+    "level",
+    "status",
+    "produced_by",
+    "entered_at"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "standpoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "A7: where a claim is made from.",
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "Document, tool or witness.",
+          "minLength": 1
+        },
+        "model_variant": {
+          "type": "string",
+          "description": "Model or version.",
+          "minLength": 1
+        },
+        "data_slice": {
+          "type": "string",
+          "description": "Subset of data the claim holds over.",
+          "minLength": 1
+        },
+        "frame": {
+          "type": "string",
+          "description": "Frame of analysis.",
+          "minLength": 1
+        }
+      },
+      "required": []
+    },
+    "overruling": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "A4/B2: the defeat, recorded.",
+      "properties": {
+        "defeater_id": {
+          "type": "string",
+          "description": "Belief that overruled this one.",
+          "minLength": 1
+        },
+        "rule": {
+          "enum": [
+            "general_to_specific",
+            "specific_to_more_specific",
+            "weaker_source_to_stronger"
+          ],
+          "description": "B2: the named precedence rule. Recency and volume are never rules."
+        },
+        "at": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2}([.][0-9]+)?)?(Z|[+-][0-9]{2}:[0-9]{2})$",
+          "description": "RFC 3339 timestamp."
+        }
+      },
+      "required": [
+        "defeater_id",
+        "rule",
+        "at"
+      ]
+    },
+    "level_move": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "from": {
+          "enum": [
+            "substrate",
+            "world_model",
+            "counterfactual",
+            "hypothetical",
+            "illusory",
+            "refuted"
+          ]
+        },
+        "to": {
+          "enum": [
+            "substrate",
+            "world_model",
+            "counterfactual",
+            "hypothetical",
+            "illusory",
+            "refuted"
+          ]
+        },
+        "authority": {
+          "type": "string",
+          "description": "A named, accountable person or office. Never the system itself.",
+          "minLength": 1
+        },
+        "checker": {
+          "type": "string",
+          "description": "Independent checker that verified a promotion. Must differ from produced_by.",
+          "minLength": 1
+        },
+        "at": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2}([.][0-9]+)?)?(Z|[+-][0-9]{2}:[0-9]{2})$",
+          "description": "RFC 3339 timestamp."
+        }
+      },
+      "required": [
+        "from",
+        "to",
+        "authority",
+        "at"
+      ]
+    }
+  }
+}

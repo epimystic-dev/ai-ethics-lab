@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/epimystic-dev/ai-ethics-lab/compass/schemas/floor-register.schema.json",
+  "title": "Floor register entry",
+  "description": "A change to the floor. Implements E1's class rule: governors tighten at C and loosen only at D, one recorded act at a time, with an expiry or review date. The system never starts a change.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Entry identifier.",
+      "minLength": 1
+    },
+    "restraint": {
+      "enum": [
+        "non_injury",
+        "truthfulness",
+        "not_stealing",
+        "self_restraint",
+        "non_grasping"
+      ],
+      "description": "E1: the five restraints."
+    },
+    "act": {
+      "enum": [
+        "tighten",
+        "loosen",
+        "exception"
+      ]
+    },
+    "class": {
+      "enum": [
+        "C",
+        "D"
+      ]
+    },
+    "governor": {
+      "type": "string",
+      "description": "A named, accountable person or office. Never the system itself.",
+      "minLength": 1
+    },
+    "reason": {
+      "type": "string",
+      "description": "Why.",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "string",
+      "description": "What it covers.",
+      "minLength": 1
+    },
+    "decided_at": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2}([.][0-9]+)?)?(Z|[+-][0-9]{2}:[0-9]{2})$",
+      "description": "RFC 3339 timestamp."
+    },
+    "expires_or_review": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "Calendar date, YYYY-MM-DD."
+    }
+  },
+  "required": [
+    "id",
+    "restraint",
+    "act",
+    "class",
+    "governor",
+    "reason",
+    "scope",
+    "decided_at",
+    "expires_or_review"
+  ],
+  "additionalProperties": false
+}
