@@ -4,6 +4,7 @@
   show ID        one primitive in full
   audit FILE     check a deployment declaration against the compass (exit 0 / 1 / 2)
   validate CONTRACT FILE   check JSON or JSONL records against a data contract (exit 0 / 2)
+  declare FILE   scaffold a deployment declaration from an inventory checklist
   prompt         print the drop-in system prompt (or --agent for the agent addendum)
   catalogue      render the Markdown catalogue (to --output FILE, UTF-8)
   ledger-verify FILE       verify an action ledger's hash chain (exit 0 / 2)
@@ -23,6 +24,7 @@ from typing import Any, List, Optional, Sequence, TextIO
 
 from . import __version__
 from .audit import audit, exit_code, verdict
+from .declare import scaffold_declaration
 from .ledger import LedgerError, verify as verify_ledger
 from .render import catalogue
 from .spec import CONTRACTS, Compass, contract_validator, prompt_text
@@ -59,6 +61,10 @@ def _build_parser() -> argparse.ArgumentParser:
     va.add_argument("contract", choices=list(CONTRACTS))
     va.add_argument("path", help="a JSON record, a JSON array of records, or JSONL")
     va.add_argument("--json", action="store_true", help="emit JSON")
+
+    de = sub.add_parser("declare", help="scaffold a deployment declaration from an inventory")
+    de.add_argument("path", help="inventory checklist (JSON)")
+    de.add_argument("--output", help="write the declaration to this file (UTF-8) instead of stdout")
 
     pr = sub.add_parser("prompt", help="print the drop-in system prompt")
     pr.add_argument("--agent", action="store_true", help="print the addendum for tool-using agents")
@@ -205,6 +211,30 @@ def main(argv: Optional[Sequence[str]] = None, stdout: Optional[TextIO] = None,
             _emit(err, "compasskit: %d of %d record(s) valid against %s"
                   % (len(records) - len(bad), len(records), args.contract))
             return 2 if bad else 0
+
+        if args.command == "declare":
+            try:
+                inventory = _load_json(args.path)
+            except (OSError, ValueError) as exc:
+                _emit(err, "compasskit: cannot read %s: %s" % (args.path, exc))
+                return 2
+            try:
+                declaration, warnings = scaffold_declaration(inventory, compass)
+            except ValueError as exc:
+                _emit(err, "compasskit: %s" % exc)
+                return 2
+            text = json.dumps(declaration, indent=2) + "\n"
+            if args.output:
+                with io.open(args.output, "w", encoding="utf-8", newline="\n") as fh:
+                    fh.write(text)
+                _emit(err, "compasskit: wrote %s" % args.output)
+            else:
+                out.write(text)
+            for w in warnings:
+                _emit(err, "compasskit: " + w)
+            _emit(err, "compasskit: scaffolded %d adopted, %d ratification stub(s), %d warning(s)"
+                  % (len(declaration["adopted"]), len(declaration["ratifications"]), len(warnings)))
+            return 0
 
         if args.command == "prompt":
             out.write(fold(prompt_text(agent=args.agent)))

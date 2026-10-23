@@ -19,6 +19,7 @@ from .floor import Floor, FloorViolation, RegisterError
 from .ledger import Ledger, LedgerError
 from .authority import sign_link, verify_chain, ObjectionBoard, checker_weight
 from .audit import audit, Finding
+from .declare import scaffold_declaration
 from .runtime import GovernedAgent, Proposal, Tool, StepResult
 
 __all__ = [
@@ -28,5 +29,5 @@ __all__ = [
     "InstructionParse", "Decision", "decide", "Absence", "review_capability_report",
     "Registry", "Segment", "Floor", "FloorViolation", "RegisterError", "Ledger", "LedgerError",
     "sign_link", "verify_chain", "ObjectionBoard", "checker_weight", "audit", "Finding",
-    "GovernedAgent", "Proposal", "Tool", "StepResult",
+    "scaffold_declaration", "GovernedAgent", "Proposal", "Tool", "StepResult",
 ]

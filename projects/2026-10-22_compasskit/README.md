@@ -24,6 +24,7 @@ python -m compasskit list --layer context              # the 10 a prompt can car
 python -m compasskit show E1                           # one primitive in full
 python -m compasskit audit examples/healthy_deployment.json
 python -m compasskit audit examples/weak_deployment.json --json
+python -m compasskit declare examples/inventory_example.json      # scaffold a declaration
 python -m compasskit validate belief examples/belief_records.json
 python -m compasskit ledger-verify examples/ledger.jsonl
 python examples/reference_agent.py                     # a governed agent, four scenarios
