@@ -222,5 +222,56 @@ class DeclareCLI(unittest.TestCase):
             shutil.rmtree(d, ignore_errors=True)
 
 
+class DeclareValidate(unittest.TestCase):
+    def test_validate_prints_audit_findings_on_stderr(self):
+        rc, out, err = run_main("declare", example("inventory_example.json"), "--validate")
+        self.assertEqual(rc, 0)
+        decl = json.loads(out)
+        self.assertEqual(deployment_validator().errors(decl), [])
+        self.assertIn("audit", err)
+        # the Class B stub for E6 has review_date == date, which fails the ratification rule,
+        # so the audit must flag E6 as a Class B primitive without a valid ratification record.
+        self.assertIn("AUD-004", err)
+        self.assertIn("E6", err)
+        # A1 and B1 in the example inventory are missing an owner or a merge date, so AUD-006
+        # must appear too.
+        self.assertIn("AUD-006", err)
+
+    def test_validate_verdict_is_unhealthy_for_the_example_inventory(self):
+        _, _, err = run_main("declare", example("inventory_example.json"), "--validate")
+        # The scaffolded Class B stub is intentionally not yet valid, so the audit must land
+        # on 'unhealthy' (any HIGH finding).
+        self.assertIn("audit unhealthy", err)
+
+    def test_without_validate_no_audit_findings_appear(self):
+        _, _, err = run_main("declare", example("inventory_example.json"))
+        self.assertNotIn("AUD-004", err)
+        self.assertNotIn("AUD-006", err)
+        self.assertNotIn("audit unhealthy", err)
+        self.assertNotIn("audit needs-attention", err)
+
+    def test_validate_coexists_with_output(self):
+        d = tempfile.mkdtemp(prefix="ck_declare_")
+        try:
+            p = os.path.join(d, "decl.json")
+            rc, _, err = run_main("declare", example("inventory_example.json"),
+                                  "--output", p, "--validate")
+            self.assertEqual(rc, 0)
+            self.assertIn("wrote " + p, err)
+            self.assertIn("AUD-004", err)
+            with io.open(p, encoding="utf-8") as fh:
+                decl = json.load(fh)
+            self.assertEqual(deployment_validator().errors(decl), [])
+        finally:
+            shutil.rmtree(d, ignore_errors=True)
+
+    def test_validate_info_findings_are_not_shown(self):
+        # AUD-009 is INFO (an unanswered design question). The inventory_example.json leaves
+        # most of the nine questions unanswered, so AUD-009 would appear if --validate did not
+        # filter INFO. It must not.
+        _, _, err = run_main("declare", example("inventory_example.json"), "--validate")
+        self.assertNotIn("AUD-009", err)
+
+
 if __name__ == "__main__":  # pragma: no cover
     unittest.main()

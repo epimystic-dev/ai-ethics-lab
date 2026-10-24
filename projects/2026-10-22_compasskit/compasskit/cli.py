@@ -65,6 +65,9 @@ def _build_parser() -> argparse.ArgumentParser:
     de = sub.add_parser("declare", help="scaffold a deployment declaration from an inventory")
     de.add_argument("path", help="inventory checklist (JSON)")
     de.add_argument("--output", help="write the declaration to this file (UTF-8) instead of stdout")
+    de.add_argument("--validate", action="store_true",
+                    help="also audit the scaffolded declaration and print findings to stderr "
+                         "(exit code stays 0; this is informational)")
 
     pr = sub.add_parser("prompt", help="print the drop-in system prompt")
     pr.add_argument("--agent", action="store_true", help="print the addendum for tool-using agents")
@@ -234,6 +237,13 @@ def main(argv: Optional[Sequence[str]] = None, stdout: Optional[TextIO] = None,
                 _emit(err, "compasskit: " + w)
             _emit(err, "compasskit: scaffolded %d adopted, %d ratification stub(s), %d warning(s)"
                   % (len(declaration["adopted"]), len(declaration["ratifications"]), len(warnings)))
+            if args.validate:
+                findings = audit(declaration, compass)
+                shown = [f for f in findings if f.severity != "INFO"]
+                for f in shown:
+                    _emit(err, "%-6s %s %s: %s" % (f.severity, f.code, f.subject, f.message))
+                v = verdict(shown)
+                _emit(err, "compasskit: audit %s; %d finding(s) on the scaffold" % (v, len(shown)))
             return 0
 
         if args.command == "prompt":
