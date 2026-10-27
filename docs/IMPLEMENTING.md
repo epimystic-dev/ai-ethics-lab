@@ -51,6 +51,9 @@ one in full, with its failure mode, sketch, adoption class and falsifier. Read e
 primitive's book chapter before adopting it; the catalogue compresses arguments it does not
 replace.
 
+[`WORKED-INVENTORY-AND-AUDIT.md`](WORKED-INVENTORY-AND-AUDIT.md) runs these two steps end to
+end for a synthetic support agent, as the two pages a team would put on the wall before step 3.
+
 ## 2. Depth 1: context (any model, today)
 
 Paste [`compass/prompts/compass-system-prompt.md`](../compass/prompts/compass-system-prompt.md)
