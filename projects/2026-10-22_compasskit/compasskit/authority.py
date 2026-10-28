@@ -6,8 +6,11 @@ Implements E7, multi-agent provenance and authority chains:
   (3) a stated objection blocks peer overrides until a principal rules;
   (5) a checker from the maker's lineage never counts as independent.
 
-A chain is a list of delegation links, each signed with the delegator's key using
-HMAC-SHA256. Principals' keys stay out of agents' reach: the verifier holds them, the agents
+A chain is a list of delegation links, each signed by the delegator. The reference signer
+is HMAC-SHA256 and is used when a key is given as raw bytes; a deployment that wants
+asymmetric signatures - so verifiers only hold public keys and signing lives in an HSM or a
+separate signer service - may pass any `signing.Signer` (bytes-or-Signer) in place of the
+raw key. Principals' keys stay out of agents' reach: the verifier holds them, the agents
 do not. Delegation between agents is a Class B decision and is off unless enabled.
 
 This is a reference model of the rules, not a key-management system. In production the
@@ -16,11 +19,11 @@ keys belong in a service the agents cannot call to sign.
 
 from __future__ import annotations
 
-import hashlib
-import hmac
 import json
 from dataclasses import dataclass, field
 from typing import Any, Dict, Iterable, List, Mapping, Optional, Sequence, Set, Tuple
+
+from .signing import coerce_signer
 
 # The book's working figure for a same-lineage checker, "for data to replace".
 SAME_LINEAGE_WEIGHT = 0.5
@@ -38,13 +41,17 @@ def _scope_set(scope: str) -> Set[str]:
     return parts
 
 
-def sign_link(key: bytes, frm: str, to: str, scope: str) -> Dict[str, str]:
-    """Create one delegation link signed by the delegator's key."""
+def sign_link(key, frm: str, to: str, scope: str) -> Dict[str, str]:
+    """Create one delegation link signed by the delegator.
+
+    `key` is either raw bytes (used with the reference HMAC-SHA256 signer) or any object
+    exposing callable `sign` and `verify` attributes - see `compasskit.signing`.
+    """
     if not (frm and to):
         raise ValueError("E7: a link names its delegator and delegate")
     _scope_set(scope)
     body = {"from": frm, "to": to, "scope": scope}
-    sig = hmac.new(key, _canonical(body), hashlib.sha256).hexdigest()
+    sig = coerce_signer(key).sign(_canonical(body))
     return dict(body, signature=sig)
 
 
@@ -55,13 +62,14 @@ class ChainCheck(object):
     scope: Tuple[str, ...] = ()
 
 
-def verify_chain(chain: Sequence[Mapping[str, str]], *, keys: Mapping[str, bytes],
+def verify_chain(chain: Sequence[Mapping[str, str]], *, keys: Mapping[str, Any],
                  humans: Iterable[str], agent: str, action: Optional[str] = None,
                  allow_agent_delegation: bool = False) -> ChainCheck:
     """Verify a principal chain ending at `agent`, optionally covering `action`.
 
     The first link must come from an accountable human; each link must be signed by its
-    delegator; each delegate must be the next delegator; scope may only narrow.
+    delegator; each delegate must be the next delegator; scope may only narrow. `keys` maps
+    each principal name to either raw bytes (reference HMAC-SHA256) or a `signing.Signer`.
     """
     human_set = set(humans)
     if not chain:
@@ -83,8 +91,7 @@ def verify_chain(chain: Sequence[Mapping[str, str]], *, keys: Mapping[str, bytes
         if key is None:
             return ChainCheck(False, "no verification key for %s" % frm)
         body = {"from": frm, "to": link["to"], "scope": link["scope"]}
-        expected = hmac.new(key, _canonical(body), hashlib.sha256).hexdigest()
-        if not hmac.compare_digest(expected, link["signature"]):
+        if not coerce_signer(key).verify(_canonical(body), link["signature"]):
             return ChainCheck(False, "link %d: signature does not verify" % i)
         link_scope = _scope_set(link["scope"])
         if scope is not None and not link_scope <= scope:

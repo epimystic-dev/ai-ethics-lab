@@ -15,11 +15,11 @@ A floor written into a prompt is a trained refusal, not this. See compass/prompt
 from __future__ import annotations
 
 import datetime as _dt
-import hashlib
-import hmac
 import json
 from dataclasses import dataclass, field
 from typing import Any, Callable, Dict, Iterable, List, Mapping, Optional, Sequence, Set
+
+from .signing import coerce_signer
 
 RESTRAINTS = ("non_injury", "truthfulness", "not_stealing", "self_restraint", "non_grasping")
 
@@ -38,10 +38,14 @@ def _canonical(obj: Mapping[str, Any]) -> bytes:
     return json.dumps(obj, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("ascii")
 
 
-def sign_entry(governor_key: bytes, entry: Mapping[str, Any]) -> str:
-    """A governor signs a register entry. Agents hold no governor key."""
+def sign_entry(governor_key, entry: Mapping[str, Any]) -> str:
+    """A governor signs a register entry. Agents hold no governor key.
+
+    `governor_key` is either raw bytes (reference HMAC-SHA256) or any object exposing
+    callable `sign` and `verify` attributes - see `compasskit.signing`.
+    """
     body = {k: v for k, v in entry.items() if k != "signature"}
-    return hmac.new(governor_key, _canonical(body), hashlib.sha256).hexdigest()
+    return coerce_signer(governor_key).sign(_canonical(body))
 
 
 def tags_classifier(action: Mapping[str, Any]) -> Iterable[str]:
@@ -52,7 +56,7 @@ def tags_classifier(action: Mapping[str, Any]) -> Iterable[str]:
 @dataclass
 class Floor(object):
     classifier: Classifier = tags_classifier
-    governor_keys: Mapping[str, bytes] = field(default_factory=dict)
+    governor_keys: Mapping[str, Any] = field(default_factory=dict)
     register: List[Dict[str, Any]] = field(default_factory=list)
     attempts: List[Dict[str, Any]] = field(default_factory=list)
 
@@ -109,7 +113,9 @@ class Floor(object):
         key = self.governor_keys.get(entry["governor"])
         if key is None:
             raise RegisterError("E1: %s is not a governor of this floor; the system never starts a change" % entry["governor"])
-        if not hmac.compare_digest(sign_entry(key, entry), entry["signature"]):
+        signer = coerce_signer(key)
+        body = {k: v for k, v in entry.items() if k != "signature"}
+        if not signer.verify(_canonical(body), entry["signature"]):
             raise RegisterError("E1: the governor's signature does not verify")
         if any(e["id"] == entry["id"] for e in self.register):
             raise RegisterError("E1: entry %s is already in the register" % entry["id"])

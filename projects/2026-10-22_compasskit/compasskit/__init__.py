@@ -21,6 +21,7 @@ from .authority import sign_link, verify_chain, ObjectionBoard, checker_weight
 from .audit import audit, Finding
 from .declare import scaffold_declaration
 from .runtime import GovernedAgent, Proposal, Tool, StepResult
+from .signing import HmacSigner, coerce_signer
 
 __all__ = [
     "__version__", "Compass", "load", "contract_validator", "compass_validator", "prompt_text",
@@ -30,4 +31,5 @@ __all__ = [
     "Registry", "Segment", "Floor", "FloorViolation", "RegisterError", "Ledger", "LedgerError",
     "sign_link", "verify_chain", "ObjectionBoard", "checker_weight", "audit", "Finding",
     "scaffold_declaration", "GovernedAgent", "Proposal", "Tool", "StepResult",
+    "HmacSigner", "coerce_signer",
 ]
