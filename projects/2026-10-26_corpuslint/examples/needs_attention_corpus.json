@@ -1,0 +1,24 @@
+{
+  "name": "example-needs-attention-corpus",
+  "version": "0.1",
+  "documents": [
+    {
+      "id": "att-001",
+      "testimony_class": "testimony",
+      "testifier": {"name": "example.com", "domain": "general-reference"},
+      "origin": "https://example.com/page-1",
+      "chain_of_custody": [
+        {"actor": "scrapy", "operation": "fetch", "timestamp": "2026-10-26T10:00:00Z"}
+      ]
+    },
+    {
+      "id": "att-002",
+      "testimony_class": "testimony",
+      "testifier": {"name": "example.com", "domain": "general-reference"},
+      "origin": "https://example.com/page-2",
+      "chain_of_custody": [
+        {"actor": "scrapy", "operation": "fetch", "timestamp": "2026-10-26T10:00:05Z"}
+      ]
+    }
+  ]
+}

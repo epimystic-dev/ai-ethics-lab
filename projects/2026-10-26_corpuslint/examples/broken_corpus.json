@@ -1,0 +1,57 @@
+{
+  "name": "example-broken-corpus",
+  "version": "0.1",
+  "documents": [
+    {
+      "id": "bad-001",
+      "testifier": {"name": "unknown-blog"},
+      "origin": "http:/not-a-url",
+      "chain_of_custody": []
+    },
+    {
+      "id": "bad-002",
+      "testimony_class": "wisdom",
+      "testifier": {"name": "an elder", "trust_weight": 0.4},
+      "origin": "https://example.com/essay",
+      "chain_of_custody": [
+        {"actor": "", "operation": "fetch", "timestamp": "2026-10-26T10:00:00Z"}
+      ]
+    },
+    {
+      "id": "bad-003",
+      "testimony_class": "testimony",
+      "origin": "https://example.com/anon",
+      "chain_of_custody": [
+        {"actor": "curl", "operation": "fetch", "timestamp": "2026-10-26T10:05:00Z"},
+        {"actor": "jq", "operation": "extract", "timestamp": "2026-10-26T09:00:00Z"}
+      ]
+    },
+    {
+      "id": "bad-004",
+      "testimony_class": "testimony",
+      "testifier": {"name": "gpt-synth-pipeline", "domain": "synthetic", "trust_weight": 0.9},
+      "origin": "https://cdn.example.com/gpt-generated/essay-412.html",
+      "chain_of_custody": [
+        {"actor": "scraper", "operation": "fetch", "timestamp": "2026-10-26T11:00:00Z"}
+      ]
+    },
+    {
+      "id": "bad-005",
+      "testimony_class": "testimony",
+      "testifier": {"name": "openlibrary.org", "domain": "general-reference", "trust_weight": 0.6},
+      "origin": "https://openlibrary.org/books/OL1.json",
+      "chain_of_custody": [
+        {"actor": "scrapy", "operation": "fetch", "timestamp": "2026-10-26T10:00:00Z"}
+      ]
+    },
+    {
+      "id": "bad-006",
+      "testimony_class": "testimony",
+      "testifier": {"name": "openlibrary.org", "domain": "general-reference", "trust_weight": 0.6},
+      "origin": "https://openlibrary.org/books/OL2.json",
+      "chain_of_custody": [
+        {"actor": "scrapy", "operation": "fetch", "timestamp": "2026-10-26T10:10:00Z"}
+      ]
+    }
+  ]
+}

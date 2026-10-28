@@ -1,0 +1,13 @@
+{
+  "name": "corpuslint",
+  "slug": "2026-10-26_corpuslint",
+  "kind": "linter",
+  "one_liner": "Lints a training or retrieval corpus manifest for testimony typing and chain of custody, so a document cannot enter a model unattributed.",
+  "problem": "Teams assemble training and retrieval corpora from many sources and then try to reconstruct where each document came from after a regulator or plaintiff asks. The compass's primitive E5 states the rule up front: every document in a corpus carries its testimony class and its chain of custody; machine-made text is its own class; chains are checked at the gate. corpuslint reads a corpus manifest and reports the shape defects that make that rule a decoration rather than a floor: untyped documents, invented testifiers, broken custody chains, machine text slipping in as human testimony, recycled synthetic generations stacking into a visible decay path. It does not pass judgement on the content of a document - the gate it enforces is at the manifest, so the discipline is checkable without reading the data.",
+  "language": "python",
+  "test_cmd": "python -m unittest discover -s tests",
+  "build_cmd": "python -m pip install -e .",
+  "deps": [],
+  "license": "Apache-2.0",
+  "clean_room": "The testimony classes and the no-testifier / machine-generated / chain-of-custody checks are implemented from the compass primitive E5 and the belief-tag taxonomy in A1 (compass/compass.json, from Appendix B of the source book under CC-BY-4.0). The rule ids, the manifest schema, the linter design and the verdict rollup are this lab's own. No third-party linter, dataset-card tool, or data-BOM tool was read, vendored or mirrored."
+}

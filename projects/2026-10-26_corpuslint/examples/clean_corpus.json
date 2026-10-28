@@ -1,0 +1,47 @@
+{
+  "name": "example-clean-corpus",
+  "version": "1.0",
+  "documents": [
+    {
+      "id": "doc-001",
+      "testimony_class": "perception",
+      "testifier": null,
+      "origin": "sensor://camera-01/2026-10-26/frame-00001.png",
+      "chain_of_custody": [
+        {"actor": "camera-firmware-3.2", "operation": "capture", "timestamp": "2026-10-26T09:00:00Z"},
+        {"actor": "ingest-worker-7", "operation": "hash+store", "timestamp": "2026-10-26T09:00:12Z"}
+      ]
+    },
+    {
+      "id": "doc-002",
+      "testimony_class": "testimony",
+      "testifier": {"name": "openlibrary.org", "domain": "general-reference", "trust_weight": 0.6},
+      "origin": "https://openlibrary.org/books/OL123456M.json",
+      "chain_of_custody": [
+        {"actor": "scrapy-2.11", "operation": "fetch", "timestamp": "2026-10-26T10:00:00Z"},
+        {"actor": "jq-strip", "operation": "extract-fields", "timestamp": "2026-10-26T10:00:03Z"},
+        {"actor": "jane-doe", "operation": "manual-review", "timestamp": "2026-10-26T11:00:00Z"}
+      ]
+    },
+    {
+      "id": "doc-003",
+      "testimony_class": "testimony",
+      "testifier": {"name": "nist-nvd-feed", "domain": "security", "trust_weight": 0.95},
+      "origin": "https://nvd.nist.gov/vuln/detail/CVE-2026-00001",
+      "chain_of_custody": [
+        {"actor": "curl-8.6", "operation": "fetch", "timestamp": "2026-10-26T10:05:00Z"},
+        {"actor": "jq-strip", "operation": "extract-fields", "timestamp": "2026-10-26T10:05:02Z"}
+      ]
+    },
+    {
+      "id": "doc-004",
+      "testimony_class": "machine_generated",
+      "testifier": {"name": "local-summarizer-v2", "domain": "synthetic", "trust_weight": 0.1},
+      "origin": "pipeline://summarizer-v2/run-42",
+      "downstream_of": "doc-002",
+      "chain_of_custody": [
+        {"actor": "summarizer-v2", "operation": "generate", "timestamp": "2026-10-26T12:00:00Z"}
+      ]
+    }
+  ]
+}
