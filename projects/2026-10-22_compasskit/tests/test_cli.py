@@ -134,6 +134,15 @@ class Ledger(unittest.TestCase):
     def test_missing(self):
         self.assertEqual(run_main("ledger-verify", "nope.jsonl")[0], 2)
 
+    def test_unreadable_path_does_not_crash(self):
+        d = tempfile.mkdtemp(prefix="ck_cli_")
+        try:
+            rc, _, err = run_main("ledger-verify", d)
+            self.assertEqual(rc, 2)
+            self.assertIn("cannot read", err)
+        finally:
+            shutil.rmtree(d, ignore_errors=True)
+
 
 class PromptAndCatalogue(unittest.TestCase):
     def test_prompt(self):
