@@ -85,6 +85,21 @@ class UnreadableInput(unittest.TestCase):
         finally:
             os.unlink(tmp.name)
 
+    def test_directory_path_does_not_crash(self):
+        # A path that exists but cannot be opened as a file (e.g. a directory
+        # on Windows surfaces PermissionError; on POSIX, IsADirectoryError)
+        # must be reported through the same uniform error path as a missing
+        # file, not propagated as a bare OSError traceback.
+        tmp = tempfile.mkdtemp(prefix="probeset_test_")
+        try:
+            r = run_cli("score", tmp)
+            self.assertEqual(r.returncode, 2)
+            self.assertIn(b"verdict=unknown", r.stderr)
+            self.assertIn(b"cannot read", r.stdout)
+            self.assertNotIn(b"Traceback", r.stderr)
+        finally:
+            os.rmdir(tmp)
+
 
 if __name__ == "__main__":
     unittest.main()

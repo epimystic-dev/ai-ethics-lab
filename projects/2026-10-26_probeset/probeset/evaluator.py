@@ -186,6 +186,14 @@ def score_responses(path: str) -> ScanResult:
     try:
         with open(path, "r", encoding="utf-8") as fh:
             data = json.load(fh)
+    except OSError as e:
+        return ScanResult(
+            findings=[],
+            verdict=Verdict.UNKNOWN,
+            probe_results=[],
+            scanned=0,
+            source=f"cannot read {path}: {e.strerror or e}",
+        )
     except json.JSONDecodeError as e:
         return ScanResult(
             findings=[],
