@@ -1,0 +1,13 @@
+{
+  "name": "probeset",
+  "slug": "2026-10-26_probeset",
+  "kind": "harness",
+  "one_liner": "A versioned, scorable test suite for the five compass system-prompt probes, so the claim that the prompt took is checkable before and after a change.",
+  "problem": "The compass ships a drop-in system prompt and claims that a model which has taken it answers five specific probes differently from one that has not. The prompt itself is prose; the probes are prose; whether the model's response to a probe counts as a pass is left to the reader. probeset turns that into a harness: five probes as data, a deterministic rule-based evaluator that scans responses for the markers each probe asks for, a verdict rollup per model run, and a report that names which rule carried the probe. The harness runs no model: it reads responses the user paste in and scores them. That keeps the method honest about what a prompt-level check can and cannot buy, and keeps the compass's own promise falsifiable.",
+  "language": "python",
+  "test_cmd": "python -m unittest discover -s tests",
+  "build_cmd": "python -m pip install -e .",
+  "deps": [],
+  "license": "Apache-2.0",
+  "clean_room": "The five probes themselves are from the Prompts README in this lab's own compass/prompts/README.md (CC-BY-4.0, written in the lab). The marker lists, the scoring rules, the verdict rollup, the authored dataset format and the CLI are this lab's own. No third-party probe set, red-team harness, or jailbreak-eval tool was read, vendored or mirrored."
+}
