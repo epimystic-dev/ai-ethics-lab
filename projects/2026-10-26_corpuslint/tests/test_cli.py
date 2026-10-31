@@ -62,6 +62,23 @@ class UnreadableInput(unittest.TestCase):
         finally:
             os.unlink(tmp.name)
 
+    def test_directory_path_does_not_crash(self):
+        # A path that exists but cannot be opened as a file (e.g. a directory
+        # on Windows surfaces PermissionError; on POSIX, IsADirectoryError)
+        # must be reported through the same uniform OSError path in
+        # linter.lint_path, not propagated as a bare traceback. This brings
+        # corpuslint's hostile-input discipline to parity with the probeset
+        # and compasskit regression tests.
+        tmp = tempfile.mkdtemp(prefix="corpuslint_test_")
+        try:
+            r = run_cli("lint", tmp)
+            self.assertEqual(r.returncode, 2)
+            self.assertIn(b"verdict=unknown", r.stderr)
+            self.assertIn(b"os-error", r.stdout)
+            self.assertNotIn(b"Traceback", r.stderr)
+        finally:
+            os.rmdir(tmp)
+
 
 class DisableFlag(unittest.TestCase):
     def test_disable_suppresses_rule(self):
