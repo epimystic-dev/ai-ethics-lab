@@ -175,6 +175,18 @@ class PayloadErrors(unittest.TestCase):
         with self.assertRaises(EvaluateError):
             score(payload)
 
+    def test_non_dict_payload_raises_evaluate_error(self):
+        # A valid-JSON file can parse to any top-level type; array, null,
+        # string, or number must be rejected with EvaluateError before score()
+        # reaches `responses_payload.get(...)`, which would otherwise be an
+        # AttributeError. This is the API-level counterpart to the CLI's
+        # test_non_dict_top_level_does_not_crash.
+        from probeset import EvaluateError
+        for payload in ([], None, "hi", 42, 3.14, True):
+            with self.subTest(payload=payload):
+                with self.assertRaises(EvaluateError):
+                    score(payload)
+
 
 if __name__ == "__main__":
     unittest.main()

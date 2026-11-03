@@ -100,6 +100,46 @@ class UnreadableInput(unittest.TestCase):
         finally:
             os.rmdir(tmp)
 
+    def test_binary_input_does_not_crash(self):
+        # A file whose bytes are not valid utf-8 (e.g. a passed-in binary
+        # artefact) must surface through the uniform UNKNOWN-verdict path,
+        # not propagate a bare UnicodeDecodeError traceback. Before the fix
+        # that routed UnicodeDecodeError to the same `cannot read` message
+        # as OSError, probeset exited rc=1 with a Python stack frame.
+        tmp = tempfile.NamedTemporaryFile(suffix=".json", delete=False)
+        try:
+            tmp.write(b"\x00\x01\xff\xfe\x02")
+            tmp.close()
+            r = run_cli("score", tmp.name)
+            self.assertEqual(r.returncode, 2)
+            self.assertIn(b"verdict=unknown", r.stderr)
+            self.assertIn(b"cannot read", r.stdout)
+            self.assertIn(b"not valid utf-8", r.stdout)
+            self.assertNotIn(b"Traceback", r.stderr)
+        finally:
+            os.unlink(tmp.name)
+
+    def test_non_dict_top_level_does_not_crash(self):
+        # A valid-JSON file whose top-level is not an object (array, null,
+        # string, number) must raise EvaluateError inside score() and be
+        # caught by score_responses, not propagate as AttributeError from
+        # `.get("responses")`. The CLI must surface it as UNKNOWN rc=2.
+        for literal in (b"[]", b"null", b'"hi"', b"42"):
+            with self.subTest(literal=literal):
+                tmp = tempfile.NamedTemporaryFile(
+                    mode="wb", suffix=".json", delete=False
+                )
+                try:
+                    tmp.write(literal)
+                    tmp.close()
+                    r = run_cli("score", tmp.name)
+                    self.assertEqual(r.returncode, 2)
+                    self.assertIn(b"verdict=unknown", r.stderr)
+                    self.assertIn(b"evaluate-error", r.stdout)
+                    self.assertNotIn(b"Traceback", r.stderr)
+                finally:
+                    os.unlink(tmp.name)
+
 
 if __name__ == "__main__":
     unittest.main()

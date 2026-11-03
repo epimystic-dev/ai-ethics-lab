@@ -90,6 +90,11 @@ def _score_one(probe: Probe, response: str) -> ProbeResult:
 # ---------------------------------------------------------------------------
 
 def _responses_by_id(responses_payload: dict) -> Dict[str, str]:
+    if not isinstance(responses_payload, dict):
+        raise EvaluateError(
+            "responses payload is not an object (got %s)"
+            % type(responses_payload).__name__
+        )
     rs = responses_payload.get("responses")
     if not isinstance(rs, list):
         raise EvaluateError("responses payload has no 'responses' list")
@@ -193,6 +198,14 @@ def score_responses(path: str) -> ScanResult:
             probe_results=[],
             scanned=0,
             source=f"cannot read {path}: {e.strerror or e}",
+        )
+    except UnicodeDecodeError as e:
+        return ScanResult(
+            findings=[],
+            verdict=Verdict.UNKNOWN,
+            probe_results=[],
+            scanned=0,
+            source=f"cannot read {path}: not valid utf-8 ({e.reason} at byte {e.start})",
         )
     except json.JSONDecodeError as e:
         return ScanResult(
