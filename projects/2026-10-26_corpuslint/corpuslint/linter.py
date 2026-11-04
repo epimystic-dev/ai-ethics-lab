@@ -129,6 +129,13 @@ def lint_path(
     try:
         with open(path, "r", encoding="utf-8") as fh:
             data = json.load(fh)
+    except UnicodeDecodeError as e:
+        return ScanResult(
+            findings=[],
+            verdict=Verdict.UNKNOWN,
+            scanned=0,
+            source=f"utf8-error: not valid utf-8 ({e.reason} at byte {e.start})",
+        )
     except json.JSONDecodeError as e:
         return ScanResult(
             findings=[],

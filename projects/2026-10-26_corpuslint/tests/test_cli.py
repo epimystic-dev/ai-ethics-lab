@@ -79,6 +79,26 @@ class UnreadableInput(unittest.TestCase):
         finally:
             os.rmdir(tmp)
 
+    def test_binary_input_does_not_crash(self):
+        # A file whose bytes are not valid utf-8 (e.g. a passed-in binary
+        # artefact) must surface through the uniform UNKNOWN-verdict path,
+        # not propagate a bare UnicodeDecodeError traceback. Before the
+        # UnicodeDecodeError branch was added to linter.lint_path, corpuslint
+        # exited rc=1 with a Python stack frame on binary input. Companion to
+        # the probeset score fix landed 2026-11-03.
+        tmp = tempfile.NamedTemporaryFile(suffix=".json", delete=False)
+        try:
+            tmp.write(b"\x00\x01\xff\xfe\x02")
+            tmp.close()
+            r = run_cli("lint", tmp.name)
+            self.assertEqual(r.returncode, 2)
+            self.assertIn(b"verdict=unknown", r.stderr)
+            self.assertIn(b"utf8-error", r.stdout)
+            self.assertIn(b"not valid utf-8", r.stdout)
+            self.assertNotIn(b"Traceback", r.stderr)
+        finally:
+            os.unlink(tmp.name)
+
 
 class DisableFlag(unittest.TestCase):
     def test_disable_suppresses_rule(self):
