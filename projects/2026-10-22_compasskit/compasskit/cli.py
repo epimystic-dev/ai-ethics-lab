@@ -268,7 +268,7 @@ def main(argv: Optional[Sequence[str]] = None, stdout: Optional[TextIO] = None,
                 ok, n, problem = verify_ledger(args.path)
             except LedgerError as exc:
                 ok, n, problem = False, 0, str(exc)
-            except OSError as exc:
+            except (OSError, UnicodeDecodeError) as exc:
                 _emit(err, "compasskit: cannot read %s: %s" % (args.path, exc))
                 return 2
             if args.json:

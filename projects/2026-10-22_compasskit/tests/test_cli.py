@@ -143,6 +143,20 @@ class Ledger(unittest.TestCase):
         finally:
             shutil.rmtree(d, ignore_errors=True)
 
+    def test_binary_input_does_not_crash(self):
+        d = tempfile.mkdtemp(prefix="ck_cli_")
+        try:
+            p = os.path.join(d, "bad.jsonl")
+            with open(p, "wb") as fh:
+                fh.write(b"\x00\x01\xff\xfe\x02")
+            rc, _, err = run_main("ledger-verify", p)
+            self.assertEqual(rc, 2)
+            self.assertIn("cannot read", err)
+            self.assertIn("utf-8", err)
+            self.assertNotIn("Traceback", err)
+        finally:
+            shutil.rmtree(d, ignore_errors=True)
+
 
 class PromptAndCatalogue(unittest.TestCase):
     def test_prompt(self):
