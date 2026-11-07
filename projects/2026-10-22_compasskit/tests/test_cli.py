@@ -10,7 +10,7 @@ import unittest
 from compasskit.render import catalogue
 from compasskit.spec import Compass
 from compasskit.text import fold
-from tests.support import example, run_main
+from tests.support import example, run_cli, run_main
 
 
 class ListShow(unittest.TestCase):
@@ -27,6 +27,20 @@ class ListShow(unittest.TestCase):
     def test_list_by_question(self):
         rc, out, _ = run_main("list", "--question", "7", "--json")
         self.assertEqual(sorted(p["id"] for p in json.loads(out)), ["E1", "E2", "E3", "E4", "E6", "G2"])
+
+    def test_list_question_out_of_range(self):
+        for value in ("0", "-1", "10", "99"):
+            with self.subTest(value=value):
+                r = run_cli("list", "--question", value)
+                self.assertEqual(r.returncode, 2)
+                self.assertIn(b"between 1 and 9", r.stderr)
+                self.assertNotIn(b"Traceback", r.stderr)
+
+    def test_list_question_non_integer(self):
+        r = run_cli("list", "--question", "seven")
+        self.assertEqual(r.returncode, 2)
+        self.assertIn(b"integer 1-9", r.stderr)
+        self.assertNotIn(b"Traceback", r.stderr)
 
     def test_show(self):
         rc, out, _ = run_main("show", "E1")

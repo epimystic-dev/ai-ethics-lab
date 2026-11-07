@@ -31,6 +31,16 @@ from .spec import CONTRACTS, Compass, contract_validator, prompt_text
 from .text import fold
 
 
+def _question_arg(s: str) -> int:
+    try:
+        n = int(s)
+    except ValueError:
+        raise argparse.ArgumentTypeError("question must be an integer 1-9")
+    if not 1 <= n <= 9:
+        raise argparse.ArgumentTypeError("question must be between 1 and 9")
+    return n
+
+
 def _build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
         prog="compasskit",
@@ -40,7 +50,8 @@ def _build_parser() -> argparse.ArgumentParser:
     sub = p.add_subparsers(dest="command")
 
     ls = sub.add_parser("list", help="list primitives")
-    ls.add_argument("--question", type=int, help="only primitives answering this question (1-9)")
+    ls.add_argument("--question", type=_question_arg,
+                    help="only primitives answering this question (1-9)")
     ls.add_argument("--class", dest="base_class", choices=["A", "B", "C", "D"], help="only this base class")
     ls.add_argument("--layer", choices=["context", "middleware", "architecture", "governance"],
                     help="only primitives enforceable at this layer")
