@@ -103,8 +103,13 @@ def _responses_by_id(responses_payload: dict) -> Dict[str, str]:
         if not isinstance(item, dict):
             raise EvaluateError(f"responses[{i}] is not an object")
         pid = item.get("probe_id")
-        if not pid:
+        if pid is None or pid == "":
             raise EvaluateError(f"responses[{i}] has no probe_id")
+        if not isinstance(pid, str):
+            raise EvaluateError(
+                f"responses[{i}].probe_id is not a string "
+                f"(got {type(pid).__name__})"
+            )
         if pid in out:
             raise EvaluateError(f"duplicate probe_id in responses: {pid}")
         out[pid] = item.get("response", "")

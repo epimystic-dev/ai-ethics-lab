@@ -187,6 +187,25 @@ class PayloadErrors(unittest.TestCase):
                 with self.assertRaises(EvaluateError):
                     score(payload)
 
+    def test_non_string_probe_id_raises_evaluate_error(self):
+        # A responses entry with a non-string probe_id (e.g. the literal 1
+        # instead of "P1") must raise EvaluateError, not silently be stored
+        # under a non-string dict key and then produce a confusing "no
+        # response supplied for this probe" failure against every real
+        # probe. Probe IDs in the data are strings; requiring the user's
+        # response payload to match is the only way to catch a typo'd
+        # schema at the earliest point.
+        from probeset import EvaluateError
+        for pid in (1, 3.14, [], {}, ["P1"]):
+            with self.subTest(probe_id=pid):
+                payload = {
+                    "model": "t",
+                    "responses": [{"probe_id": pid, "response": "x"}],
+                }
+                with self.assertRaises(EvaluateError) as cm:
+                    score(payload)
+                self.assertIn("not a string", str(cm.exception))
+
 
 if __name__ == "__main__":
     unittest.main()
